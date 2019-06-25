@@ -1,14 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
-export default class Home extends React.Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>We have no friends!</Text>
-            </View>
-        );
-    }
+const Homepage = (props) => {
+
+    const { navigate } = props.navigation;
+
+    return (
+        <View style={styles.container}>
+            <Button title="Yo xd" onPress={() => navigate('Champions')} />
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
@@ -19,3 +20,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 });
+
+export default Homepage;
