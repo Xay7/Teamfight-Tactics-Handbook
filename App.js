@@ -7,12 +7,15 @@
  */
 
 import React, { Component } from 'react';
-import AppNavigator from './AppNavigator'
+import AppNavigator from './AppNavigator';
+import Footer from './src/components/Footer';
 
 export default class App extends Component {
   render() {
     return (
-      <AppNavigator />
+      <React.Fragment>
+        <AppNavigator />
+      </React.Fragment>
     );
   }
 }
