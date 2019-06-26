@@ -1,6 +1,6 @@
 export const champions = {
     Aatrox: {
-        image: require('./ChampionsCircled/Aatrox.png'),
+        image: require('./Champions/Aatrox.png'),
         origin: "Demon",
         class: "Blademaster",
         ability: {
@@ -8,10 +8,21 @@ export const champions = {
             name: "The Darkin Blade",
             description: "Deals 350 / 600 / 850 magic damage to all enemies in a circle."
         },
+        stats: {
+            cost: 2,
+            health: "650 / 1170 / 2340",
+            mana: "100",
+            dps: "42",
+            damage: "65",
+            attackSpeed: "0.65",
+            attackSange: "1 hex",
+            magicResist: "20",
+            armor: "25"
+        },
         name: "Aatrox",
     },
     Ahri: {
-        image: require('./ChampionsCircled/Ahri.png'),
+        image: require('./Champions/Ahri.png'),
         origin: "Wild",
         class: "Sorcerer",
         ability: {
@@ -22,7 +33,7 @@ export const champions = {
         name: "Ahri"
     },
     Akali: {
-        image: require('./ChampionsCircled/Akali.png'),
+        image: require('./Champions/Akali.png'),
         origin: "Ninja",
         class: "Assassin",
         ability: {
@@ -33,7 +44,7 @@ export const champions = {
         name: "Akali"
     },
     Anivia: {
-        image: require('./ChampionsCircled/Anivia.png'),
+        image: require('./Champions/Anivia.png'),
         origin: "Glacial",
         class: "Elementalist",
         ability: {
@@ -44,7 +55,7 @@ export const champions = {
         name: "Anivia"
     },
     Ashe: {
-        image: require('./ChampionsCircled/Ashe.png'),
+        image: require('./Champions/Ashe.png'),
         origin: "Glacial",
         class: "Ranger",
         ability: {
@@ -55,7 +66,7 @@ export const champions = {
         name: "Ashe"
     },
     "Aurelion Sol": {
-        image: require('./ChampionsCircled/Aurelion_Sol.png'),
+        image: require('./Champions/Aurelion_Sol.png'),
         origin: "Dragon",
         class: "Sorcerer",
         ability: {
@@ -66,7 +77,7 @@ export const champions = {
         name: "Aurelion Sol"
     },
     Blitzcrank: {
-        image: require('./ChampionsCircled/Blitzcrank.png'),
+        image: require('./Champions/Blitzcrank.png'),
         origin: "Robot",
         class: "Brawler",
         ability: {
@@ -77,7 +88,7 @@ export const champions = {
         name: "Blitzcrank"
     },
     Brand: {
-        image: require('./ChampionsCircled/Brand.png'),
+        image: require('./Champions/Brand.png'),
         origin: "Demon",
         class: "Elementalist",
         ability: {
@@ -88,7 +99,7 @@ export const champions = {
         name: "Brand"
     },
     Braum: {
-        image: require('./ChampionsCircled/Braum.png'),
+        image: require('./Champions/Braum.png'),
         origin: "Glacial",
         class: "Guardian",
         ability: {
@@ -99,7 +110,7 @@ export const champions = {
         name: "Braum"
     },
     "Cho'gath": {
-        image: require('./ChampionsCircled/Chogath.png'),
+        image: require('./Champions/Chogath.png'),
         origin: "Void",
         class: "Brawler",
         ability: {
@@ -110,7 +121,7 @@ export const champions = {
         name: "Cho'gath"
     },
     Darius: {
-        image: require('./ChampionsCircled/Darius.png'),
+        image: require('./Champions/Darius.png'),
         origin: "Imperial",
         class: "Knight",
         ability: {
@@ -121,7 +132,7 @@ export const champions = {
         name: "Darius"
     },
     Draven: {
-        image: require('./ChampionsCircled/Draven.png'),
+        image: require('./Champions/Draven.png'),
         origin: "Imperial",
         class: "Assassin",
         ability: {
@@ -132,7 +143,7 @@ export const champions = {
         name: "Draven"
     },
     Elise: {
-        image: require('./ChampionsCircled/Elise.png'),
+        image: require('./Champions/Elise.png'),
         origin: "Demon",
         class: "Shapeshifter",
         ability: {
@@ -143,7 +154,7 @@ export const champions = {
         name: "Elise"
     },
     Evelynn: {
-        image: require('./ChampionsCircled/Evelynn.png'),
+        image: require('./Champions/Evelynn.png'),
         origin: "Demon",
         class: "Assassin",
         ability: {
@@ -154,7 +165,7 @@ export const champions = {
         name: "Evelynn"
     },
     Fiora: {
-        image: require('./ChampionsCircled/Fiora.png'),
+        image: require('./Champions/Fiora.png'),
         origin: "Noble",
         class: "Blademaster",
         ability: {
@@ -165,7 +176,7 @@ export const champions = {
         name: "Fiora"
     },
     Gangplank: {
-        image: require('./ChampionsCircled/Gangplank.png'),
+        image: require('./Champions/Gangplank.png'),
         origin: "Pirate",
         class: "Blademaster",
         classSecond: "Gunslinger",
@@ -177,7 +188,7 @@ export const champions = {
         name: "Gangplank"
     },
     Garen: {
-        image: require('./ChampionsCircled/Garen.png'),
+        image: require('./Champions/Garen.png'),
         origin: "Noble",
         class: "Knight",
         ability: {
@@ -188,7 +199,7 @@ export const champions = {
         name: "Garen"
     },
     Gnar: {
-        image: require('./ChampionsCircled/Gnar.png'),
+        image: require('./Champions/Gnar.png'),
         origin: "Wild",
         originSecond: "Yordle",
         class: "Shapeshifter",
@@ -200,7 +211,7 @@ export const champions = {
         name: "Gnar"
     },
     Graves: {
-        image: require('./ChampionsCircled/Graves.png'),
+        image: require('./Champions/Graves.png'),
         origin: "Pirate",
         class: "Gunslinger",
         ability: {
@@ -211,7 +222,7 @@ export const champions = {
         name: "Graves"
     },
     Karthus: {
-        image: require('./ChampionsCircled/Karthus.png'),
+        image: require('./Champions/Karthus.png'),
         origin: "Phantom",
         class: "Sorcerer",
         ability: {
@@ -222,7 +233,7 @@ export const champions = {
         name: "Karthus"
     },
     Kassadin: {
-        image: require('./ChampionsCircled/Kassadin.png'),
+        image: require('./Champions/Kassadin.png'),
         origin: "Void",
         class: "Sorcerer",
         ability: {
@@ -233,7 +244,7 @@ export const champions = {
         name: "Kassadin"
     },
     Katarina: {
-        image: require('./ChampionsCircled/Katarina.png'),
+        image: require('./Champions/Katarina.png'),
         origin: "Imperial",
         class: "Assassin",
         ability: {
@@ -244,7 +255,7 @@ export const champions = {
         name: "Katarina"
     },
     Kayle: {
-        image: require('./ChampionsCircled/Kayle.png'),
+        image: require('./Champions/Kayle.png'),
         origin: "Noble",
         class: "Knight",
         ability: {
@@ -255,7 +266,7 @@ export const champions = {
         name: "Kayle"
     },
     Kennen: {
-        image: require('./ChampionsCircled/Kennen.png'),
+        image: require('./Champions/Kennen.png'),
         origin: "Ninja",
         originSecond: "Yordle",
         class: "Elementalist",
@@ -267,7 +278,7 @@ export const champions = {
         name: "Kennen"
     },
     Khazix: {
-        image: require('./ChampionsCircled/Khazix.png'),
+        image: require('./Champions/Khazix.png'),
         origin: "Void",
         class: "Assassin",
         ability: {
@@ -278,7 +289,7 @@ export const champions = {
         name: "Kha'zix"
     },
     Kindred: {
-        image: require('./ChampionsCircled/Kindred.png'),
+        image: require('./Champions/Kindred.png'),
         origin: "Phantom",
         class: "Ranger",
         ability: {
@@ -289,7 +300,7 @@ export const champions = {
         name: "Kindred"
     },
     Leona: {
-        image: require('./ChampionsCircled/Leona.png'),
+        image: require('./Champions/Leona.png'),
         origin: "Noble",
         class: "Guardian",
         ability: {
@@ -300,7 +311,7 @@ export const champions = {
         name: "Leona"
     },
     Lissandra: {
-        image: require('./ChampionsCircled/Lissandra.png'),
+        image: require('./Champions/Lissandra.png'),
         origin: "Glacial",
         class: "Elementalist",
         ability: {
@@ -311,7 +322,7 @@ export const champions = {
         name: "Lissandra"
     },
     Lucian: {
-        image: require('./ChampionsCircled/Lucian.png'),
+        image: require('./Champions/Lucian.png'),
         origin: "Noble",
         class: "Gunslinger",
         ability: {
@@ -322,7 +333,7 @@ export const champions = {
         name: "Lucian"
     },
     Lulu: {
-        image: require('./ChampionsCircled/Lulu.png'),
+        image: require('./Champions/Lulu.png'),
         origin: "Yordle",
         class: "Sorcerer",
         ability: {
@@ -333,7 +344,7 @@ export const champions = {
         name: "Lulu"
     },
     "Miss Fortune": {
-        image: require('./ChampionsCircled/Missfortune.png'),
+        image: require('./Champions/Missfortune.png'),
         origin: "Pirate",
         class: "Gunslinger",
         ability: {
@@ -344,7 +355,7 @@ export const champions = {
         name: "Miss Fortune"
     },
     Mordekaiser: {
-        image: require('./ChampionsCircled/Mordekaiser.png'),
+        image: require('./Champions/Mordekaiser.png'),
         origin: "Demon",
         class: "Sorcerer",
         ability: {
@@ -355,7 +366,7 @@ export const champions = {
         name: "Mordekaiser"
     },
     Morgana: {
-        image: require('./ChampionsCircled/Morgana.png'),
+        image: require('./Champions/Morgana.png'),
         origin: "Demon",
         class: "Sorcerer",
         ability: {
@@ -366,7 +377,7 @@ export const champions = {
         name: "Morgana"
     },
     Nidalee: {
-        image: require('./ChampionsCircled/Nidalee.png'),
+        image: require('./Champions/Nidalee.png'),
         origin: "Wild",
         class: "Shapeshifter",
         ability: {
@@ -377,7 +388,7 @@ export const champions = {
         name: "Nidalee"
     },
     Poppy: {
-        image: require('./ChampionsCircled/Poppy.png'),
+        image: require('./Champions/Poppy.png'),
         origin: "Yordle",
         class: "Knight",
         ability: {
@@ -388,7 +399,7 @@ export const champions = {
         name: "Poppy"
     },
     Pyke: {
-        image: require('./ChampionsCircled/Pyke.png'),
+        image: require('./Champions/Pyke.png'),
         origin: "Pirate",
         class: "Assassin",
         ability: {
@@ -399,7 +410,7 @@ export const champions = {
         name: "Pyke"
     },
     "Rek'sai": {
-        image: require('./ChampionsCircled/Reksai.png'),
+        image: require('./Champions/Reksai.png'),
         origin: "Void",
         class: "Brawler",
         ability: {
@@ -410,7 +421,7 @@ export const champions = {
         name: "Rek'sai"
     },
     Rengar: {
-        image: require('./ChampionsCircled/Rengar.png'),
+        image: require('./Champions/Rengar.png'),
         origin: "Void",
         class: "Brawler",
         ability: {
@@ -421,7 +432,7 @@ export const champions = {
         name: "Rengar"
     },
     Sejuani: {
-        image: require('./ChampionsCircled/Sejuani.png'),
+        image: require('./Champions/Sejuani.png'),
         origin: "Glacial",
         class: "Knight",
         ability: {
@@ -432,7 +443,7 @@ export const champions = {
         name: "Sejuani"
     },
     Shen: {
-        image: require('./ChampionsCircled/Shen.png'),
+        image: require('./Champions/Shen.png'),
         origin: "Ninja",
         class: "Blademaster",
         ability: {
@@ -443,7 +454,7 @@ export const champions = {
         name: "Shen"
     },
     Shyvana: {
-        image: require('./ChampionsCircled/Shyvana.png'),
+        image: require('./Champions/Shyvana.png'),
         origin: "Dragon",
         class: "Shapeshifter",
         ability: {
@@ -454,7 +465,7 @@ export const champions = {
         name: "Shyvana"
     },
     Swain: {
-        image: require('./ChampionsCircled/Swain.png'),
+        image: require('./Champions/Swain.png'),
         origin: "Demon",
         originSecond: "Imperial",
         class: "Shapeshifter",
@@ -466,7 +477,7 @@ export const champions = {
         name: "Swain"
     },
     Tristana: {
-        image: require('./ChampionsCircled/Tristana.png'),
+        image: require('./Champions/Tristana.png'),
         origin: "Yordle",
         class: "Gunslinger",
         ability: {
@@ -477,7 +488,7 @@ export const champions = {
         name: "Tristana"
     },
     Varus: {
-        image: require('./ChampionsCircled/Varus.png'),
+        image: require('./Champions/Varus.png'),
         origin: "Demon",
         class: "Ranger",
         ability: {
@@ -488,7 +499,7 @@ export const champions = {
         name: "Varus"
     },
     Vayne: {
-        image: require('./ChampionsCircled/Vayne.png'),
+        image: require('./Champions/Vayne.png'),
         origin: "Noble",
         class: "Ranger",
         ability: {
@@ -499,7 +510,7 @@ export const champions = {
         name: "Vayne"
     },
     Veigar: {
-        image: require('./ChampionsCircled/Veigar.png'),
+        image: require('./Champions/Veigar.png'),
         origin: "Yordle",
         class: "Sorcerer",
         ability: {
@@ -510,7 +521,7 @@ export const champions = {
         name: "Veigar"
     },
     Volibear: {
-        image: require('./ChampionsCircled/Volibear.png'),
+        image: require('./Champions/Volibear.png'),
         origin: "Glacial",
         class: "Brawler",
         ability: {
@@ -521,7 +532,7 @@ export const champions = {
         name: "Volibear"
     },
     Warwick: {
-        image: require('./ChampionsCircled/Warwick.png'),
+        image: require('./Champions/Warwick.png'),
         origin: "Wild",
         class: "Brawler",
         ability: {
@@ -532,7 +543,7 @@ export const champions = {
         name: "Warwick"
     },
     Yasuo: {
-        image: require('./ChampionsCircled/Yasuo.png'),
+        image: require('./Champions/Yasuo.png'),
         origin: "Exile",
         class: "Blademaster",
         ability: {
@@ -543,7 +554,7 @@ export const champions = {
         name: "Yasuo"
     },
     Zed: {
-        image: require('./ChampionsCircled/Zed.png'),
+        image: require('./Champions/Zed.png'),
         origin: "Ninja",
         class: "Assassin",
         ability: {

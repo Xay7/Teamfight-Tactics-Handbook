@@ -7,7 +7,7 @@ const ChampionInfo = (props) => {
 
     const name = navigation.getParam('name', 'Oops, something went wrong');
 
-    const champion = require('../assets/index').champions["Gnar"]
+    const champion = require('../assets/index').champions["Aatrox"]
     const firstOrigin = require('../assets/index').origin[champion.origin]
     const secondOrigin = require('../assets/index').origin[champion.originSecond]
     const firstClass = require('../assets/index').classes[champion.class]
