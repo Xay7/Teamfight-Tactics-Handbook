@@ -4,6 +4,7 @@ import { champions, origin, classes } from '../assets/index';
 import bg from '../assets/bg.png';
 import Icon from 'react-native-vector-icons/AntDesign';
 
+
 const Champions = (props) => {
 
     const { width, height } = Dimensions.get('screen');
