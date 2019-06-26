@@ -14,7 +14,7 @@ export const champions = {
             mana: "100",
             damage: "65",
             attackSpeed: "0.65",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "25"
         },
@@ -36,7 +36,7 @@ export const champions = {
             mana: "75",
             damage: "28",
             attackSpeed: "0.55",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "20"
         },
@@ -58,7 +58,7 @@ export const champions = {
             mana: "25",
             damage: "70",
             attackSpeed: "0.75",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "20"
         },
@@ -80,7 +80,7 @@ export const champions = {
             mana: "100",
             damage: "40",
             attackSpeed: "0.6",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "20"
         },
@@ -94,7 +94,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Ashe.png'),
             name: "Enchanted Crystal Arrow",
-            description: "Fires an arrow that stuns and deals 200 / 400 / 600 magic damage to the first enemy hit. The stun lasts 1 / 1.5 / 2 seconds per hex traveled."
+            description: "Fires an arrow that stuns and deals 200 / 400 / 600 magic damage to the first enemy hit. The stun lasts 1 / 1.5 / 2 seconds per range traveled."
         },
         stats: {
             cost: 3,
@@ -102,7 +102,7 @@ export const champions = {
             mana: "100",
             damage: "60",
             attackSpeed: "0.7",
-            attackRange: "4 hex",
+            attackRange: "4 range",
             magicResist: "20",
             armor: "20"
         },
@@ -124,7 +124,7 @@ export const champions = {
             mana: "100",
             damage: "40",
             attackSpeed: "0.6",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "20"
         },
@@ -146,7 +146,7 @@ export const champions = {
             mana: "150",
             damage: "50",
             attackSpeed: "0.5",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "35"
         },
@@ -168,7 +168,7 @@ export const champions = {
             mana: "100",
             damage: "60",
             attackSpeed: "0.6",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "25"
         },
@@ -190,7 +190,7 @@ export const champions = {
             mana: "75",
             damage: "40",
             attackSpeed: "0.6",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "25"
         },
@@ -212,7 +212,7 @@ export const champions = {
             mana: "150",
             damage: "70",
             attackSpeed: "0.55",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "20"
         },
@@ -234,7 +234,7 @@ export const champions = {
             mana: "100",
             damage: "50",
             attackSpeed: "0.5",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "25"
         },
@@ -256,7 +256,7 @@ export const champions = {
             mana: "50",
             damage: "75",
             attackSpeed: "0.65",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "25"
         },
@@ -278,7 +278,7 @@ export const champions = {
             mana: "100",
             damage: "40",
             attackSpeed: "0.6",
-            attackRange: "2 hex",
+            attackRange: "2 range",
             magicResist: "20",
             armor: "25"
         },
@@ -292,7 +292,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Evelynn.png'),
             name: "Last Caress",
-            description: "Deals 200 / 250 / 300 magic damage to the 3 closest enemies and blinks back 3 hexes. Damage is increased to 600 / 1000 / 1500 against enemies below 50% health."
+            description: "Deals 200 / 250 / 300 magic damage to the 3 closest enemies and blinks back 3 rangees. Damage is increased to 600 / 1000 / 1500 against enemies below 50% health."
         },
         stats: {
             cost: 3,
@@ -300,7 +300,7 @@ export const champions = {
             mana: "75",
             damage: "50",
             attackSpeed: "0.6",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "20"
         },
@@ -322,7 +322,7 @@ export const champions = {
             mana: "100",
             damage: "55",
             attackSpeed: "0.6",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "20"
         },
@@ -345,7 +345,7 @@ export const champions = {
             mana: "100",
             damage: "55",
             attackSpeed: "0.6",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "20"
         },
@@ -367,7 +367,7 @@ export const champions = {
             mana: "100",
             damage: "55",
             attackSpeed: "0.55",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "35"
         },
@@ -382,7 +382,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Gnar.png'),
             name: "GNAR!",
-            description: "Transforms into a melee attacker for 60 seconds, gaining 300 / 600 / 900 health, 30 / 60 / 90 attack damage, jumping behind the farthest enemy and then  shunts all surrounding enemies 2 hexes toward his team,  stunning them for 2 seconds and dealing 200 / 300 / 400 magic damage."
+            description: "Transforms into a melee attacker for 60 seconds, gaining 300 / 600 / 900 health, 30 / 60 / 90 attack damage, jumping behind the farthest enemy and then  shunts all surrounding enemies 2 rangees toward his team,  stunning them for 2 seconds and dealing 200 / 300 / 400 magic damage."
         },
         stats: {
             cost: 4,
@@ -390,7 +390,7 @@ export const champions = {
             mana: "125",
             damage: "45",
             attackSpeed: "0.7",
-            attackRange: "2 hex",
+            attackRange: "2 range",
             magicResist: "20",
             armor: "35"
         },
@@ -412,7 +412,7 @@ export const champions = {
             mana: "0",
             damage: "55",
             attackSpeed: "0.55",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "20"
         },
@@ -434,7 +434,7 @@ export const champions = {
             mana: "100",
             damage: "65",
             attackSpeed: "0.65",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "25"
         },
@@ -456,7 +456,7 @@ export const champions = {
             mana: "0",
             damage: "45",
             attackSpeed: "0.65",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "25"
         },
@@ -478,7 +478,7 @@ export const champions = {
             mana: "100",
             damage: "50",
             attackSpeed: "0.6",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "25"
         },
@@ -500,7 +500,7 @@ export const champions = {
             mana: "100",
             damage: "60",
             attackSpeed: "1.1",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "35"
         },
@@ -523,7 +523,7 @@ export const champions = {
             mana: "150",
             damage: "60",
             attackSpeed: "0.6",
-            attackRange: "2 hex",
+            attackRange: "2 range",
             magicResist: "20",
             armor: "20"
         },
@@ -545,7 +545,7 @@ export const champions = {
             mana: "50",
             damage: "50",
             attackSpeed: "0.6",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "20"
         },
@@ -567,7 +567,7 @@ export const champions = {
             mana: "150",
             damage: "55",
             attackSpeed: "0.65",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "20"
         },
@@ -589,7 +589,7 @@ export const champions = {
             mana: "150",
             damage: "45",
             attackSpeed: "0.55",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "55"
         },
@@ -611,7 +611,7 @@ export const champions = {
             mana: "150",
             damage: "40",
             attackSpeed: "0.6",
-            attackRange: "2 hex",
+            attackRange: "2 range",
             magicResist: "20",
             armor: "20"
         },
@@ -633,7 +633,7 @@ export const champions = {
             mana: "35",
             damage: "65",
             attackSpeed: "0.65",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "25"
         },
@@ -655,7 +655,7 @@ export const champions = {
             mana: "150",
             damage: "50",
             attackSpeed: "0.6",
-            attackRange: "2 hex",
+            attackRange: "2 range",
             magicResist: "20",
             armor: "25"
         },
@@ -677,7 +677,7 @@ export const champions = {
             mana: "100",
             damage: "75",
             attackSpeed: "0.85",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "20"
         },
@@ -691,7 +691,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Mordekaiser.png'),
             name: "Obliterate",
-            description: "Slams his mace in front of him, dealing 200 / 325 / 450 magic damage to two enemies in a line 3 hexes away."
+            description: "Slams his mace in front of him, dealing 200 / 325 / 450 magic damage to two enemies in a line 3 rangees away."
         },
         stats: {
             cost: 1,
@@ -699,7 +699,7 @@ export const champions = {
             mana: "100",
             damage: "50",
             attackSpeed: "0.5",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "35"
         },
@@ -713,7 +713,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Morgana.png'),
             name: "Soul Shackles",
-            description: "Fires chains to nearby enemies up to 3 hexes away, dealing 250 / 350 / 450 magic damage, and  slowing them by 20% while the chains hold. After 3 seconds if the chains held, deals the same damage and  stuns them for 2 / 4 / 6 seconds."
+            description: "Fires chains to nearby enemies up to 3 rangees away, dealing 250 / 350 / 450 magic damage, and  slowing them by 20% while the chains hold. After 3 seconds if the chains held, deals the same damage and  stuns them for 2 / 4 / 6 seconds."
         },
         stats: {
             cost: 3,
@@ -721,7 +721,7 @@ export const champions = {
             mana: "150",
             damage: "50",
             attackSpeed: "0.6",
-            attackRange: "2 hex",
+            attackRange: "2 range",
             magicResist: "20",
             armor: "20"
         },
@@ -743,7 +743,7 @@ export const champions = {
             mana: "100",
             damage: "50",
             attackSpeed: "0.65",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "20"
         },
@@ -765,7 +765,7 @@ export const champions = {
             mana: "100",
             damage: "50",
             attackSpeed: "0.5",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "30"
         },
@@ -787,7 +787,7 @@ export const champions = {
             mana: "125",
             damage: "60",
             attackSpeed: "0.6",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "25"
         },
@@ -809,7 +809,7 @@ export const champions = {
             mana: "150",
             damage: "40",
             attackSpeed: "0.65",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "20"
         },
@@ -831,7 +831,7 @@ export const champions = {
             mana: "75",
             damage: "55",
             attackSpeed: "0.55",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "20"
         },
@@ -853,7 +853,7 @@ export const champions = {
             mana: "150",
             damage: "45",
             attackSpeed: "0.55",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "35"
         },
@@ -875,7 +875,7 @@ export const champions = {
             mana: "150",
             damage: "65",
             attackSpeed: "0.6",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "30"
         },
@@ -897,7 +897,7 @@ export const champions = {
             mana: "100",
             damage: "50",
             attackSpeed: "0.65",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "20"
         },
@@ -920,7 +920,7 @@ export const champions = {
             mana: "100",
             damage: "65",
             attackSpeed: "0.65",
-            attackRange: "2 hex",
+            attackRange: "2 range",
             magicResist: "20",
             armor: "25"
         },
@@ -934,7 +934,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Tristana.png'),
             name: "Explosive Charge",
-            description: "Places a bomb on her current target, that detonates after 4 seconds or 3 attacks, dealing 60 / 90 / 120 magic damage to enemies up to 2 hexes away. The damage is increased by 50% with each attack, dealing up to 150 / 225 / 300 magic damage."
+            description: "Places a bomb on her current target, that detonates after 4 seconds or 3 attacks, dealing 60 / 90 / 120 magic damage to enemies up to 2 rangees away. The damage is increased by 50% with each attack, dealing up to 150 / 225 / 300 magic damage."
         },
         stats: {
             cost: 1,
@@ -942,7 +942,7 @@ export const champions = {
             mana: "50",
             damage: "50",
             attackSpeed: "0.7",
-            attackRange: "4 hex",
+            attackRange: "4 range",
             magicResist: "20",
             armor: "25"
         },
@@ -956,7 +956,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Varus.png'),
             name: "Piercing Arrow",
-            description: "After charging for 1.5 seconds, fires an arrow up to 8 hexes away, dealing 400 / 600 / 800 magic damage to all enemies hit."
+            description: "After charging for 1.5 seconds, fires an arrow up to 8 rangees away, dealing 400 / 600 / 800 magic damage to all enemies hit."
         },
         stats: {
             cost: 2,
@@ -964,7 +964,7 @@ export const champions = {
             mana: "100",
             damage: "50",
             attackSpeed: "0.7",
-            attackRange: "4 hex",
+            attackRange: "4 range",
             magicResist: "20",
             armor: "25"
         },
@@ -986,7 +986,7 @@ export const champions = {
             mana: "0",
             damage: "45",
             attackSpeed: "0.6",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "25"
         },
@@ -1008,7 +1008,7 @@ export const champions = {
             mana: "100",
             damage: "45",
             attackSpeed: "0.55",
-            attackRange: "3 hex",
+            attackRange: "3 range",
             magicResist: "20",
             armor: "20"
         },
@@ -1022,7 +1022,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Volibear.png'),
             name: "Thunder Claws",
-            description: "For 20 seconds, empowers his basic attacks to bounce to up to 3 / 4 / 5 enemies 1 hex away, dealing 80 / 90 / 100% physical damage to secondary targets, and applying on-hit effects."
+            description: "For 20 seconds, empowers his basic attacks to bounce to up to 3 / 4 / 5 enemies 1 range away, dealing 80 / 90 / 100% physical damage to secondary targets, and applying on-hit effects."
         },
         stats: {
             cost: 2,
@@ -1030,7 +1030,7 @@ export const champions = {
             mana: "100",
             damage: "75",
             attackSpeed: "0.5",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "35"
         },
@@ -1052,7 +1052,7 @@ export const champions = {
             mana: "150",
             damage: "50",
             attackSpeed: "0.6",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "30"
         },
@@ -1066,7 +1066,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Yasuo.png'),
             name: "Steel Tempest",
-            description: "Stabs fowards, dealing 150 / 250 / 350 magic damage to two enemies in a line 2 hexes away. On third cast, instead launches a tornado, dealing the same magic damage and  knocking up enemies for 1.25 seconds in a line 6 hexes away."
+            description: "Stabs fowards, dealing 150 / 250 / 350 magic damage to two enemies in a line 2 rangees away. On third cast, instead launches a tornado, dealing the same magic damage and  knocking up enemies for 1.25 seconds in a line 6 rangees away."
         },
         stats: {
             cost: 5,
@@ -1074,7 +1074,7 @@ export const champions = {
             mana: "25",
             damage: "65",
             attackSpeed: "1.0",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "35"
         },
@@ -1088,7 +1088,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Zed.png'),
             name: "Razor Shuriken",
-            description: "Throws a shuriken, dealing 200 / 300 / 400 magic damage to enemies in a line 4 hexes away."
+            description: "Throws a shuriken, dealing 200 / 300 / 400 magic damage to enemies in a line 4 rangees away."
         },
         stats: {
             cost: 2,
@@ -1096,7 +1096,7 @@ export const champions = {
             mana: "75",
             damage: "60",
             attackSpeed: "0.65",
-            attackRange: "1 hex",
+            attackRange: "1 range",
             magicResist: "20",
             armor: "25"
         },
@@ -1304,7 +1304,7 @@ export const classes = {
     Elementalist: {
         name: "Elementalist",
         image: require('./Class/Elementalist.png'),
-        description: "Beginning combat with 3 Elementalists will summon an Elemental adjacent to one of your Elementalists, in the closest empty hex to an enemy. This effect will fail if there are no valid spaces.",
+        description: "Beginning combat with 3 Elementalists will summon an Elemental adjacent to one of your Elementalists, in the closest empty range to an enemy. This effect will fail if there are no valid spaces.",
     },
     Guardian: {
         name: "Guardian",

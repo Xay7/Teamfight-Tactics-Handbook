@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
+import Footer from '../components/Footer';
 
 const Homepage = (props) => {
 
@@ -7,7 +8,10 @@ const Homepage = (props) => {
 
     return (
         <View style={styles.container}>
-            <Button title="Yo xd" onPress={() => navigate('Champions')} />
+            <ScrollView>
+                <Button title="Yo xd" onPress={() => navigate('Champions')} />
+            </ScrollView>
+            <Footer navigation={props.navigation} />
         </View>
     );
 }

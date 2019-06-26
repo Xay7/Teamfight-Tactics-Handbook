@@ -1,11 +1,16 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { champions, origin, classes } from '../assets/index';
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <View style={styles.container}>
-            <Text style={{ color: "white" }}>Home</Text>
-            <Text style={{ color: "white" }}>Champions</Text>
+            < TouchableOpacity onPress={() => props.navigation.navigate('Home')}>
+                <Text style={{ color: "white" }} >Home</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Champions')}>
+                <Text style={{ color: "white" }} >Champions</Text>
+            </TouchableOpacity>
             <Text style={{ color: "white" }}>Items</Text>
         </View>
     )
@@ -14,10 +19,13 @@ const Footer = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: "black",
-        height: 60,
+        height: 70,
+        width: "100%",
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderTopWidth: 1,
+        borderTopColor: "#EEE"
     }
 })
 

@@ -14,11 +14,12 @@ const AppNavigator = createStackNavigator({
     ChampionInfo: ChampionInfo,
 },
     {
-        initialRouteName: 'ChampionInfo',
+        initialRouteName: 'Champions',
         headerMode: 'none',
         navigationOptions: {
             headerVisible: false,
-        }
+        },
+        lazy: true
     });
 
 const App = createAppContainer(AppNavigator);

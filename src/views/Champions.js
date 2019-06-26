@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Image, ScrollView, TouchableOpacity, TextInput, Text, Dimensions } from 'react-native';
-import { champions, origin, classes } from '../assets/index';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, View, Image, ScrollView, TouchableOpacity, TextInput, Text, Dimensions, ActivityIndicator } from 'react-native';
+import { champions, origin, classes, tiers } from '../assets/index';
 import bg from '../assets/bg.png';
 import Icon from 'react-native-vector-icons/AntDesign';
-
+import Footer from '../components/Footer';
 
 const Champions = (props) => {
+
+    const [allChampions, setAllChampions] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        setAllChampions(champions);
+        setLoading(false);
+    }, [])
 
     const { width, height } = Dimensions.get('screen');
 
@@ -13,37 +21,38 @@ const Champions = (props) => {
 
     const { navigate } = props.navigation;
 
-    let championsList = Object.keys(champions).map((key, i) => {
+    let championsList = Object.keys(allChampions).map((key, i) => {
         if (inputValue.length > 0) {
-            if (champions[key].name.toLowerCase().includes(inputValue.toLowerCase())) {
+            if (allChampions[key].name.toLowerCase().includes(inputValue.toLowerCase())) {
                 return <TouchableOpacity
-                    key={champions[key].name}
+                    key={allChampions[key].name}
                     onPress={() => navigate('ChampionInfo', {
-                        name: champions[key].name
+                        name: allChampions[key].name
                     })}>
-                    <View style={styles.championsWrapper}>
-                        <Image source={champions[key].image} style={styles.champion} />
-                        <Text style={{ color: "white", fontSize: 24, fontWeight: "bold", marginHorizontal: 10 }}>{champions[key].name}</Text>
-                        <Image source={origin[champions[key].origin].image} style={styles.synergy} />
-                        {champions[key].originSecond && <Image source={origin[champions[key].originSecond].image} style={styles.synergy} ></Image>}
-                        <Image source={classes[champions[key].class].image} style={styles.synergy} />
-                        {champions[key].classSecond && <Image source={classes[champions[key].classSecond].image} style={styles.synergy} ></Image>}
+                    <View style={styles.allChampionsWrapper}>
+                        <Image source={allChampions[key].image} style={styles.champion} />
+                        <Text style={{ color: "white", fontSize: 24, fontWeight: "bold", marginHorizontal: 10 }}>{allChampions[key].name}</Text>
+                        <Image source={origin[allChampions[key].origin].image} style={styles.synergy} />
+                        {allChampions[key].originSecond && <Image source={origin[allChampions[key].originSecond].image} style={styles.synergy} ></Image>}
+                        <Image source={classes[allChampions[key].class].image} style={styles.synergy} />
+                        {allChampions[key].classSecond && <Image source={classes[allChampions[key].classSecond].image} style={styles.synergy} ></Image>}
                     </View>
                 </TouchableOpacity>
             } else return null;
         } else {
             return <TouchableOpacity
-                key={champions[key].name}
+                key={allChampions[key].name}
                 onPress={() => navigate('ChampionInfo', {
-                    name: champions[key].name
+                    name: allChampions[key].name
                 })}>
-                <View style={styles.championsWrapper}>
-                    <Image source={champions[key].image} style={styles.champion} />
-                    <Text style={{ color: "white", fontSize: 24, fontWeight: "bold", marginHorizontal: 10 }}>{champions[key].name}</Text>
-                    <Image source={origin[champions[key].origin].image} style={styles.synergy} />
-                    {champions[key].originSecond && <Image source={origin[champions[key].originSecond].image} style={styles.synergy} ></Image>}
-                    <Image source={classes[champions[key].class].image} style={styles.synergy} />
-                    {champions[key].classSecond && <Image source={classes[champions[key].classSecond].image} style={styles.synergy} ></Image>}
+                <View style={styles.allChampionsWrapper}>
+                    <Image source={allChampions[key].image} style={styles.champion} />
+                    {tiers[allChampions[key].tier] && <Image source={tiers[allChampions[key].tier].image} style={{ width: 15, height: 15 }} />}
+                    <Text style={{ color: "white", fontSize: 20, fontWeight: "bold", marginHorizontal: 10 }}>{allChampions[key].name}</Text>
+                    <Image source={origin[allChampions[key].origin].image} style={styles.synergy} />
+                    {allChampions[key].originSecond && <Image source={origin[allChampions[key].originSecond].image} style={styles.synergy} ></Image>}
+                    <Image source={classes[allChampions[key].class].image} style={styles.synergy} />
+                    {allChampions[key].classSecond && <Image source={classes[allChampions[key].classSecond].image} style={styles.synergy} ></Image>}
                 </View>
             </TouchableOpacity>
         }
@@ -62,16 +71,27 @@ const Champions = (props) => {
             <ScrollView>
                 <View style={styles.container}  >
                     <View style={styles.searchContainer} >
-                        <Icon name="search1" size={25} color="#000" style={{ backgroundColor: "#EEE", padding: 25 / 2 }} />
+                        <Icon
+                            name="search1"
+                            size={25}
+                            color="#000"
+                            style={{
+                                backgroundColor: "#EEE",
+                                padding: 25 / 2,
+                                borderBottomLeftRadius: 5,
+                                borderTopLeftRadius: 5
+                            }} />
                         <TextInput
                             style={styles.search}
-                            placeholder="Find champions"
+                            placeholder="Find champion"
                             onChangeText={(text) => useInputValue(text)} >
                         </TextInput>
                     </View>
+                    {loading && <ActivityIndicator size={72} color="#eeeeee" />}
                     {championsList}
                 </View>
             </ScrollView>
+            <Footer navigation={props.navigation} />
         </View>
     );
 }
@@ -83,27 +103,29 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
     },
     champion: {
-        height: 70,
-        width: 70,
+        height: 64,
+        width: 64,
         margin: 5
     },
-    championsWrapper: {
+    allChampionsWrapper: {
         flex: 1,
         flexDirection: "row",
         justifyContent: "flex-start",
         alignItems: "center",
-        paddingHorizontal: 10,
+        marginHorizontal: 25,
         marginBottom: 5
     },
     search: {
-        width: "70%",
+        flex: 0.7,
         height: 51,
-        backgroundColor: "#EEE",
+        backgroundColor: "white",
         borderColor: "#EEE",
         paddingRight: 30,
         textAlign: "center",
         fontSize: 25,
-        color: "blue",
+        color: "black",
+        borderBottomRightRadius: 5,
+        borderTopRightRadius: 5
     },
     searchContainer: {
         flex: 1,
@@ -113,8 +135,8 @@ const styles = StyleSheet.create({
         borderColor: '#000',
     },
     synergy: {
-        width: 36,
-        height: 36,
+        width: 24,
+        height: 24,
         marginLeft: 10
     }
 });

@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, Dimensions } from 'react-native';
 import bg from '../assets/bg.png';
-const { width, height } = Dimensions.get('screen');
 import Health from '../assets/UI/health.png';
 import Cost from '../assets/UI/cost.png';
 import Mana from '../assets/UI/mana.png';
@@ -10,13 +9,16 @@ import AttackSpeed from '../assets/UI/attackspeed.png';
 import AttackRange from '../assets/UI/attackrange.png';
 import MagicResist from '../assets/UI/magicresist.png';
 import Armor from '../assets/UI/armor.png';
+import Footer from '../components/Footer';
+import Synergy from '../components/Synergy';
+
+const { width, height } = Dimensions.get('screen');
 
 const ChampionInfo = (props) => {
-    const { navigation } = props;
 
-    const name = navigation.getParam('name', 'Oops, something went wrong');
+    const name = props.navigation.getParam('name', 'Oops, something went wrong');
 
-    const champion = require('../assets/index').champions["Gnar"]
+    const champion = require('../assets/index').champions[name]
     const firstOrigin = require('../assets/index').origin[champion.origin]
     const secondOrigin = require('../assets/index').origin[champion.originSecond]
     const firstClass = require('../assets/index').classes[champion.class]
@@ -24,7 +26,7 @@ const ChampionInfo = (props) => {
     const tier = require('../assets/index').tiers[champion.tier]
 
     return (
-        <View>
+        <View style={{ flex: 1 }}>
             <Image source={bg}
                 style={{
                     position: "absolute",
@@ -90,111 +92,40 @@ const ChampionInfo = (props) => {
                                 <Text style={styles.text}>{champion.ability.description}</Text>
                             </View>
                         </View>
-                        <View style={styles.synergyContainer}>
-                            <Image source={firstOrigin.image} style={styles.synergy} />
-                            <View style={styles.synergyDescriptionContainer}>
-                                <Text style={styles.textHeader}>{firstOrigin.name}</Text>
-                                <Text style={styles.text}>{firstOrigin.description}</Text>
-                                {firstOrigin.ability ? firstOrigin.ability.first ?
-                                    <View style={styles.synergyAbilityContainer}>
-                                        <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{firstOrigin.ability.first.amount}</Text>
-                                        <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{firstOrigin.ability.first.effect}</Text>
-                                    </View>
-                                    : null : null}
-                                {firstOrigin.ability ? firstOrigin.ability.second ?
-                                    <View style={styles.synergyAbilityContainer}>
-                                        <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{firstOrigin.ability.second.amount}</Text>
-                                        <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{firstOrigin.ability.second.effect}</Text>
-                                    </View>
-                                    : null : null}
-                                {firstOrigin.ability ? firstOrigin.ability.third ?
-                                    <View style={styles.synergyAbilityContainer}>
-                                        <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{firstOrigin.ability.third.amount}</Text>
-                                        <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{firstOrigin.ability.third.effect}</Text>
-                                    </View>
-                                    : null : null}
-                            </View>
-                        </View>
+                        <Synergy
+                            image={firstOrigin.image}
+                            ability={firstOrigin.ability && firstOrigin.ability}
+                            name={firstOrigin.name}
+                            description={firstOrigin.description}
+                        />
                         {secondOrigin &&
-                            <View style={styles.synergyContainer}>
-                                <Image source={secondOrigin.image} style={styles.synergy} />
-                                <View style={styles.synergyDescriptionContainer}>
-                                    <Text style={styles.textHeader}>{secondOrigin.name}</Text>
-                                    <Text style={styles.text}>{secondOrigin.description}</Text>
-                                    {secondOrigin.ability ? secondOrigin.ability.first ?
-                                        <View style={styles.synergyAbilityContainer}>
-                                            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{secondOrigin.ability.first.amount}</Text>
-                                            <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{secondOrigin.ability.first.effect}</Text>
-                                        </View>
-                                        : null : null}
-                                    {secondOrigin.ability ? secondOrigin.ability.second ?
-                                        <View style={styles.synergyAbilityContainer}>
-                                            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{secondOrigin.ability.second.amount}</Text>
-                                            <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{secondOrigin.ability.second.effect}</Text>
-                                        </View>
-                                        : null : null}
-                                    {secondOrigin.ability ? secondOrigin.ability.third ?
-                                        <View style={styles.synergyAbilityContainer}>
-                                            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{secondOrigin.ability.third.amount}</Text>
-                                            <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{secondOrigin.ability.third.effect}</Text>
-                                        </View>
-                                        : null : null}
-                                </View>
-                            </View>}
-                        <View style={styles.synergyContainer}>
-                            <Image source={firstClass.image} style={styles.synergy} />
-                            <View style={styles.synergyDescriptionContainer}>
-                                <Text style={styles.textHeader}>{firstClass.name}</Text>
-                                <Text style={styles.text}>{firstClass.description}</Text>
-                                {firstClass.ability ? firstClass.ability.first ?
-                                    <View style={styles.synergyAbilityContainer}>
-                                        <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{firstClass.ability.first.amount}</Text>
-                                        <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{firstClass.ability.first.effect}</Text>
-                                    </View>
-                                    : null : null}
-                                {firstClass.ability ? firstClass.ability.second ?
-                                    <View style={styles.synergyAbilityContainer}>
-                                        <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{firstClass.ability.second.amount}</Text>
-                                        <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{firstClass.ability.second.effect}</Text>
-                                    </View>
-                                    : null : null}
-                                {firstClass.ability ? firstClass.ability.third ?
-                                    <View style={styles.synergyAbilityContainer}>
-                                        <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{firstClass.ability.third.amount}</Text>
-                                        <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{firstClass.ability.third.effect}</Text>
-                                    </View>
-                                    : null : null}
-                            </View>
-                        </View>
-                        {secondClass && <View style={styles.synergyContainer}>
-                            <Image source={secondClass.image} style={styles.synergy} />
-                            <View style={styles.synergyDescriptionContainer}>
-                                <Text style={styles.textHeader}>{secondClass.name}</Text>
-                                <Text style={styles.text}>{secondClass.description}</Text>
-                                {secondClass.ability ? secondClass.ability.first ?
-                                    <View style={styles.synergyAbilityContainer}>
-                                        <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{secondClass.ability.first.amount}</Text>
-                                        <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{secondClass.ability.first.effect}</Text>
-                                    </View>
-                                    : null : null}
-                                {secondClass.ability ? secondClass.ability.second ?
-                                    <View style={styles.synergyAbilityContainer}>
-                                        <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{secondClass.ability.second.amount}</Text>
-                                        <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{secondClass.ability.second.effect}</Text>
-                                    </View>
-                                    : null : null}
-                                {secondClass.ability ? secondClass.ability.third ?
-                                    <View style={styles.synergyAbilityContainer}>
-                                        <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{secondClass.ability.third.amount}</Text>
-                                        <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{secondClass.ability.third.effect}</Text>
-                                    </View>
-                                    : null : null}
-                            </View>
-                        </View>}
+                            <Synergy
+                                image={secondOrigin.image}
+                                ability={secondOrigin.ability && secondOrigin.ability}
+                                name={secondOrigin.name}
+                                description={secondOrigin.description}
+                            />
+                        }
+                        <Synergy
+                            image={firstClass.image}
+                            ability={firstClass.ability && firstClass.ability}
+                            name={firstClass.name}
+                            description={firstClass.description}
+                        />
+                        {secondClass &&
+                            <Synergy
+                                image={secondClass.image}
+                                ability={secondClass.ability && secondClass.ability}
+                                name={secondClass.name}
+                                description={secondClass.description}
+                            />
+                        }
                     </View>
                 </View>
             </ScrollView>
+            <Footer navigation={props.navigation} />
         </View>
+
     )
 }
 
