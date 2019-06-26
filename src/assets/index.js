@@ -1,300 +1,833 @@
-export const championCircle = [
-    {
+export const champions = {
+    Aatrox: {
         image: require('./ChampionsCircled/Aatrox.png'),
-        originImage: require('./Origin/Demon.png'),
-        classImage: require('./Class/Blademaster.png'),
-        name: "Aatrox"
+        origin: "Demon",
+        class: "Blademaster",
+        ability: {
+            image: require('./Abilities/Aatrox.png'),
+            name: "The Darkin Blade",
+            description: "Deals 350 / 600 / 850 magic damage to all enemies in a circle."
+        },
+        name: "Aatrox",
     },
-    {
+    Ahri: {
         image: require('./ChampionsCircled/Ahri.png'),
-        originImage: require('./Origin/Wild.png'),
-        classImage: require('./Class/Sorcerer.png'),
+        origin: "Wild",
+        class: "Sorcerer",
+        ability: {
+            image: require('./Abilities/Ahri.png'),
+            name: "Orb of Deception",
+            description: "Fires an orb in a line that returns to her, dealing 100 / 175 / 250 magic damage to enemies it passes through"
+        },
         name: "Ahri"
     },
-    {
+    Akali: {
         image: require('./ChampionsCircled/Akali.png'),
-        originImage: require('./Origin/Ninja.png'),
-        classImage: require('./Class/Assassin.png'),
+        origin: "Ninja",
+        class: "Assassin",
+        ability: {
+            image: require('./Abilities/Akali.png'),
+            name: "Five Point Strike",
+            description: "Deals 200 / 375 / 550 magic damage to all enemies in a cone."
+        },
         name: "Akali"
     },
-    {
+    Anivia: {
         image: require('./ChampionsCircled/Anivia.png'),
-        originImage: require('./Origin/Glacial.png'),
-        classImage: require('./Class/Elementalist.png'),
+        origin: "Glacial",
+        class: "Elementalist",
+        ability: {
+            image: require('./Abilities/Anivia.png'),
+            name: "Glacial Storm",
+            description: "Channels a large hailstorm for 8 seconds, dealing 87.5 / 118.75 / 150 magic damage each second and slowing the attack speed of enemies inside it by 50 / 70 / 90%. The storm can deal a total of 700 / 950 / 1200 magic damage."
+        },
         name: "Anivia"
     },
-    {
+    Ashe: {
         image: require('./ChampionsCircled/Ashe.png'),
-        originImage: require('./Origin/Glacial.png'),
-        classImage: require('./Class/Ranger.png'),
+        origin: "Glacial",
+        class: "Ranger",
+        ability: {
+            image: require('./Abilities/Ashe.png'),
+            name: "Enchanted Crystal Arrow",
+            description: "Fires an arrow that stuns and deals 200 / 400 / 600 magic damage to the first enemy hit. The stun lasts 1 / 1.5 / 2 seconds per hex traveled."
+        },
         name: "Ashe"
     },
-    {
+    "Aurelion Sol": {
         image: require('./ChampionsCircled/Aurelion_Sol.png'),
-        originImage: require('./Origin/Dragon.png'),
-        classImage: require('./Class/Sorcerer.png'),
+        origin: "Dragon",
+        class: "Sorcerer",
+        ability: {
+            image: require('./Abilities/Aurelion_Sol.png'),
+            name: "Voice of Light",
+            description: "After a 0.35-second delay, deals 250 / 450 / 650 magic damage to all enemies in a line."
+        },
         name: "Aurelion Sol"
     },
-    {
+    Blitzcrank: {
         image: require('./ChampionsCircled/Blitzcrank.png'),
-        originImage: require('./Origin/Robot.png'),
-        classImage: require('./Class/Brawler.png'),
+        origin: "Robot",
+        class: "Brawler",
+        ability: {
+            image: require('./Abilities/Blitzcrank.png'),
+            name: "Rocket Grab",
+            description: "Pulls the farthest enemy into melee range, stunning them for 2.5 seconds, dealing 100 / 450 / 800 magic damage, and knocks them up (missile and pull speed: 3000)."
+        },
         name: "Blitzcrank"
     },
-    {
+    Brand: {
         image: require('./ChampionsCircled/Brand.png'),
-        originImage: require('./Origin/Demon.png'),
-        classImage: require('./Class/Elementalist.png'),
+        origin: "Demon",
+        class: "Elementalist",
+        ability: {
+            image: require('./Abilities/Brand.png'),
+            name: "Pyroclasm",
+            description: "Unleashes a fireball that bounces 4 / 4 / 6 times between enemies, dealing 200 / 300 / 400 magic damage with each bounce."
+        },
         name: "Brand"
     },
-    {
+    Braum: {
         image: require('./ChampionsCircled/Braum.png'),
-        originImage: require('./Origin/Glacial.png'),
-        classImage: require('./Class/Guardian.png'),
+        origin: "Glacial",
+        class: "Guardian",
+        ability: {
+            image: require('./Abilities/Braum.png'),
+            name: "Unbreakable",
+            description: "Raises a barrier for 4 seconds that redirects all incoming damage to Braum, and reduces the damage he takes through the shield by 60 / 75 / 90%."
+        },
         name: "Braum"
     },
-    {
+    "Cho'gath": {
         image: require('./ChampionsCircled/Chogath.png'),
-        originImage: require('./Origin/Void.png'),
-        classImage: require('./Class/Brawler.png'),
+        origin: "Void",
+        class: "Brawler",
+        ability: {
+            image: require('./Abilities/Chogath.png'),
+            name: "Rupture",
+            description: "After a 1.5-second delay, deals 200 / 400 / 600 magic damage and  knocks up all enemies in a 3x3 area, stunning them for 2 / 2.25 / 2.5 seconds."
+        },
         name: "Cho'gath"
     },
-    {
+    Darius: {
         image: require('./ChampionsCircled/Darius.png'),
-        originImage: require('./Origin/Imperial.png'),
-        classImage: require('./Class/Knight.png'),
+        origin: "Imperial",
+        class: "Knight",
+        ability: {
+            image: require('./Abilities/Darius.png'),
+            name: "Decimate",
+            description: "Deals 150 / 200 / 250 magic damage to all nearby enemies and heals himself for 100 / 150 / 200 for each enemy hit."
+        },
         name: "Darius"
     },
-    {
+    Draven: {
         image: require('./ChampionsCircled/Draven.png'),
-        originImage: require('./Origin/Imperial.png'),
-        classImage: require('./Class/Assassin.png'),
+        origin: "Imperial",
+        class: "Assassin",
+        ability: {
+            image: require('./Abilities/Draven.png'),
+            name: "Spinning Axes",
+            description: "Basic attacks grant 50 / 100 / 150% bonus on-hit physical damage and 30 / 45 / 60% attack speed for 8 seconds, stacking up to two times."
+        },
         name: "Draven"
     },
-    {
+    Elise: {
         image: require('./ChampionsCircled/Elise.png'),
-        originImage: require('./Origin/Demon.png'),
-        classImage: require('./Class/Shapeshifter.png'),
+        origin: "Demon",
+        class: "Shapeshifter",
+        ability: {
+            image: require('./Abilities/Elise.png'),
+            name: "Spider form",
+            description: "Summons 2 / 3 / 4 Spiderlings with 500 health, and transforms into a melee attacker for 60 seconds, gaining 60 / 90 / 120% life steal."
+        },
         name: "Elise"
     },
-    {
+    Evelynn: {
         image: require('./ChampionsCircled/Evelynn.png'),
-        originImage: require('./Origin/Demon.png'),
-        classImage: require('./Class/Assassin.png'),
+        origin: "Demon",
+        class: "Assassin",
+        ability: {
+            image: require('./Abilities/Evelynn.png'),
+            name: "Last Caress",
+            description: "Deals 200 / 250 / 300 magic damage to the 3 closest enemies and blinks back 3 hexes. Damage is increased to 600 / 1000 / 1500 against enemies below 50% health."
+        },
         name: "Evelynn"
     },
-    {
+    Fiora: {
         image: require('./ChampionsCircled/Fiora.png'),
-        originImage: require('./Origin/Noble.png'),
-        classImage: require('./Class/Blademaster.png'),
+        origin: "Noble",
+        class: "Blademaster",
+        ability: {
+            image: require('./Abilities/Fiora.png'),
+            name: "Riposte",
+            description: "Becomes immune to damage and spells for 1.5 seconds, and then  stuns for 1.5 seconds and deals 100 / 175 / 250 magic damage to the closest enemy."
+        },
         name: "Fiora"
     },
-    {
+    Gangplank: {
         image: require('./ChampionsCircled/Gangplank.png'),
-        originImage: require('./Origin/Pirate.png'),
-        classImage: require('./Class/Blademaster.png'),
-        classImageSecond: require('./Class/Gunslinger.png'),
+        origin: "Pirate",
+        class: "Blademaster",
+        classSecond: "Gunslinger",
+        ability: {
+            image: require('./Abilities/Gangplank.png'),
+            name: "Powder Kegs",
+            description: "Detonates all active Powder Kegs, dealing 200 / 325 / 450 magic damage to enemies caught in the blast."
+        },
         name: "Gangplank"
     },
-    {
+    Garen: {
         image: require('./ChampionsCircled/Garen.png'),
-        originImage: require('./Origin/Noble.png'),
-        classImage: require('./Class/Knight.png'),
+        origin: "Noble",
+        class: "Knight",
+        ability: {
+            image: require('./Abilities/Garen.png'),
+            name: "Judgment",
+            description: "Spins his sword around his body for 4 seconds, becoming immune to magic damage and dealing 60 / 90 / 120 magic damage to nearby enemies each second. The spins can deal a total of 540 / 810 / 1080 magic damage."
+        },
         name: "Garen"
     },
-    {
+    Gnar: {
         image: require('./ChampionsCircled/Gnar.png'),
-        originImage: require('./Origin/Wild.png'),
-        originImageSecond: require('./Origin/Yordle.png'),
-        classImage: require('./Class/Shapeshifter.png'),
+        origin: "Wild",
+        originSecond: "Yordle",
+        class: "Shapeshifter",
+        ability: {
+            image: require('./Abilities/Gnar.png'),
+            name: "GNAR!",
+            description: "Transforms into a melee attacker for 60 seconds, gaining 300 / 600 / 900 health, 30 / 60 / 90 attack damage, jumping behind the farthest enemy and then  shunts all surrounding enemies 2 hexes toward his team,  stunning them for 2 seconds and dealing 200 / 300 / 400 magic damage."
+        },
         name: "Gnar"
     },
-    {
+    Graves: {
         image: require('./ChampionsCircled/Graves.png'),
-        originImage: require('./Origin/Pirate.png'),
-        classImage: require('./Class/Gunslinger.png'),
+        origin: "Pirate",
+        class: "Gunslinger",
+        ability: {
+            image: require('./Abilities/Graves.png'),
+            name: "Buckshot",
+            description: "Basic attacks deal 5 / 10 / 15% increased physical damage and hit all enemies in front of him."
+        },
         name: "Graves"
     },
-    {
+    Karthus: {
         image: require('./ChampionsCircled/Karthus.png'),
-        originImage: require('./Origin/Phantom.png'),
-        classImage: require('./Class/Sorcerer.png'),
+        origin: "Phantom",
+        class: "Sorcerer",
+        ability: {
+            image: require('./Abilities/Karthus.png'),
+            name: "Requiem",
+            description: "Channel for 3 seconds to deal 350 / 600 / 850 magic damage to 4 / 7 / 10 random enemies."
+        },
         name: "Karthus"
     },
-    {
+    Kassadin: {
         image: require('./ChampionsCircled/Kassadin.png'),
-        originImage: require('./Origin/Void.png'),
-        classImage: require('./Class/Sorcerer.png'),
+        origin: "Void",
+        class: "Sorcerer",
+        ability: {
+            image: require('./Abilities/Kassadin.png'),
+            name: "Nether Blade",
+            description: "Basic attacks steal 20 / 40 / 60 mana, converting it into a shield for 4 seconds."
+        },
         name: "Kassadin"
     },
-    {
+    Katarina: {
         image: require('./ChampionsCircled/Katarina.png'),
-        originImage: require('./Origin/Imperial.png'),
-        classImage: require('./Class/Assassin.png'),
+        origin: "Imperial",
+        class: "Assassin",
+        ability: {
+            image: require('./Abilities/Katarina.png'),
+            name: "Death Lotus",
+            description: "Channels for 2.5 seconds and fires daggers at 3 / 5 / 7 nearby enemies, dealing 40 / 60 / 80 magic damage per tick and reducing healing on them for 3 seconds. The channel can deal a total of 600 / 900 / 1200 magic damage."
+        },
         name: "Katarina"
     },
-    {
+    Kayle: {
         image: require('./ChampionsCircled/Kayle.png'),
-        originImage: require('./Origin/Noble.png'),
-        classImage: require('./Class/Knight.png'),
+        origin: "Noble",
+        class: "Knight",
+        ability: {
+            image: require('./Abilities/Kayle.png'),
+            name: "Divine Judgement",
+            description: "Targets the 1 / 2 / 3 weakest allies, making them immune to damage for 2 / 3 / 4 seconds, and dealing 500 / 800 / 1100 magic damage at the end of the duration."
+        },
         name: "Kayle"
     },
-    {
+    Kennen: {
         image: require('./ChampionsCircled/Kennen.png'),
-        originImage: require('./Origin/Ninja.png'),
-        originImageSecond: require('./Origin/Yordle.png'),
-        classImage: require('./Class/Elementalist.png'),
+        origin: "Ninja",
+        originSecond: "Yordle",
+        class: "Elementalist",
+        ability: {
+            image: require('./Abilities/Kennen.png'),
+            name: "Slicing Maelstorm",
+            description: "Summons a storm around him for 3 seconds, dealing 50 / 80 / 110 magic damage each 0.5 seconds to nearby enemies,  stunning for 1.5 seconds them after 3 hits. The storm can deal a total of 350 / 560 / 770 magic damage."
+        },
         name: "Kennen"
     },
-    {
+    Khazix: {
         image: require('./ChampionsCircled/Khazix.png'),
-        originImage: require('./Origin/Void.png'),
-        classImage: require('./Class/Assassin.png'),
+        origin: "Void",
+        class: "Assassin",
+        ability: {
+            image: require('./Abilities/Khazix.png'),
+            name: "Taste their Fear",
+            description: "Deals 150 / 250 / 350 magic damage to the target enemy. Instead deals 400 / 600 / 800 magic damage if they have no allies adjacent to them."
+        },
         name: "Kha'zix"
     },
-    {
+    Kindred: {
         image: require('./ChampionsCircled/Kindred.png'),
-        originImage: require('./Origin/Phantom.png'),
-        classImage: require('./Class/Ranger.png'),
+        origin: "Phantom",
+        class: "Ranger",
+        ability: {
+            image: require('./Abilities/Kindred.png'),
+            name: "Lamb's Respite",
+            description: "Creates a zone around herself for 4 / 5 / 6 seconds that prevents nearby allies from dying. Additionally, allies in the zone cannot have their health go below 300 / 600 / 900."
+        },
         name: "Kindred"
     },
-    {
+    Leona: {
         image: require('./ChampionsCircled/Leona.png'),
-        originImage: require('./Origin/Noble.png'),
-        classImage: require('./Class/Guardian.png'),
+        origin: "Noble",
+        class: "Guardian",
+        ability: {
+            image: require('./Abilities/Leona.png'),
+            name: "Solar Flare",
+            description: "After a 0.625-second delay, calls down a solar ray that deals 175 / 250 / 325 magic damage and  slows all enemies within a 3x3 for 5 / 8 / 11 seconds. The enemy in the center is instead  stunned for the same duration."
+        },
         name: "Leona"
     },
-    {
+    Lissandra: {
         image: require('./ChampionsCircled/Lissandra.png'),
-        originImage: require('./Origin/Glacial.png'),
-        classImage: require('./Class/Elementalist.png'),
+        origin: "Glacial",
+        class: "Elementalist",
+        ability: {
+            image: require('./Abilities/Lissandra.png'),
+            name: "Frozen Tomb",
+            description: "Encases the target in ice,  stunning them for 1.5 seconds and dealing 225 / 300 / 375 magic damage to nearby enemies. She also creates a 2x2 zone for 3 seconds that  slows enemies within for 3 seconds. If she is below 50% health, she instead encases herself for 2 seconds, becoming untargetable."
+        },
         name: "Lissandra"
     },
-    {
+    Lucian: {
         image: require('./ChampionsCircled/Lucian.png'),
-        originImage: require('./Origin/Noble.png'),
-        classImage: require('./Class/Gunslinger.png'),
+        origin: "Noble",
+        class: "Gunslinger",
+        ability: {
+            image: require('./Abilities/Lucian.png'),
+            name: "Relentless Pursuit",
+            description: "Dashes away from nearby enemies and then attacks twice on his next attack. The first attack deals 25 / 45 / 65 physical damage, while the second deals 20 / 25 / 30 magic damage."
+        },
         name: "Lucian"
     },
-    {
+    Lulu: {
         image: require('./ChampionsCircled/Lulu.png'),
-        originImage: require('./Origin/Yordle.png'),
-        classImage: require('./Class/Sorcerer.png'),
+        origin: "Yordle",
+        class: "Sorcerer",
+        ability: {
+            image: require('./Abilities/Lulu.png'),
+            name: "Wild Growth",
+            description: "Grants 1 / 2 / 3 allies 300 / 475 / 650 bonus health for 6 seconds,  knocking up enemies near them for 1.25 seconds."
+        },
         name: "Lulu"
     },
-    {
+    "Miss Fortune": {
         image: require('./ChampionsCircled/Missfortune.png'),
-        originImage: require('./Origin/Pirate.png'),
-        classImage: require('./Class/Gunslinger.png'),
+        origin: "Pirate",
+        class: "Gunslinger",
+        ability: {
+            image: require('./Abilities/Miss_Fortune.png'),
+            name: "Bullet Time",
+            description: "Channels for 3 seconds and fires 14 waves of bullets in a cone, dealing 57.14 / 89.29 / 121.43 magic damage with each wave. The channel can deal a total of 800 / 1250 / 1700 magic damage."
+        },
         name: "Miss Fortune"
     },
-    {
+    Mordekaiser: {
         image: require('./ChampionsCircled/Mordekaiser.png'),
-        originImage: require('./Origin/Demon.png'),
-        classImage: require('./Class/Sorcerer.png'),
+        origin: "Demon",
+        class: "Sorcerer",
+        ability: {
+            image: require('./Abilities/Mordekaiser.png'),
+            name: "Obliterate",
+            description: "Slams his mace in front of him, dealing 200 / 325 / 450 magic damage to two enemies in a line 3 hexes away."
+        },
         name: "Mordekaiser"
     },
-    {
+    Morgana: {
         image: require('./ChampionsCircled/Morgana.png'),
-        originImage: require('./Origin/Demon.png'),
-        classImage: require('./Class/Sorcerer.png'),
+        origin: "Demon",
+        class: "Sorcerer",
+        ability: {
+            image: require('./Abilities/Morgana.png'),
+            name: "Soul Shackles",
+            description: "Fires chains to nearby enemies up to 3 hexes away, dealing 250 / 350 / 450 magic damage, and  slowing them by 20% while the chains hold. After 3 seconds if the chains held, deals the same damage and  stuns them for 2 / 4 / 6 seconds."
+        },
         name: "Morgana"
     },
-    {
+    Nidalee: {
         image: require('./ChampionsCircled/Nidalee.png'),
-        originImage: require('./Origin/Wild.png'),
-        classImage: require('./Class/Shapeshifter.png'),
+        origin: "Wild",
+        class: "Shapeshifter",
+        ability: {
+            image: require('./Abilities/Nidalee.png'),
+            name: "Primal Surge",
+            description: "After a 0.5-second delay, heals herself and the weakest ally over 6 seconds, healing for a total of 150 / 375 / 600 health, then transforms into a melee attacker for 6 seconds, gaining 20 / 70 / 120 attack damage."
+        },
         name: "Nidalee"
     },
-    {
+    Poppy: {
         image: require('./ChampionsCircled/Poppy.png'),
-        originImage: require('./Origin/Yordle.png'),
-        classImage: require('./Class/Knight.png'),
+        origin: "Yordle",
+        class: "Knight",
+        ability: {
+            image: require('./Abilities/Poppy.png'),
+            name: "Keeper's Verdict",
+            description: "After a 0.75-second delay, swings her hammer at the closest enemy, dealing 300 / 400 / 500 magic damage,  knocking up for 1 second and  stunning for 1.5 / 2.5 / 3.5 seconds."
+        },
         name: "Poppy"
     },
-    {
+    Pyke: {
         image: require('./ChampionsCircled/Pyke.png'),
-        originImage: require('./Origin/Pirate.png'),
-        classImage: require('./Class/Assassin.png'),
+        origin: "Pirate",
+        class: "Assassin",
+        ability: {
+            image: require('./Abilities/Pyke.png'),
+            name: "Phantom Undertow",
+            description: "Dashes behind the furthest enemy, creating an afterimage that, after 1 second, deals 150 / 200 / 250 magic damage and  stuns all enemies it passes through for 2.5 / 3 / 3.5 seconds."
+        },
         name: "Pyke"
     },
-    {
+    "Rek'sai": {
         image: require('./ChampionsCircled/Reksai.png'),
-        originImage: require('./Origin/Void.png'),
-        classImage: require('./Class/Brawler.png'),
+        origin: "Void",
+        class: "Brawler",
+        ability: {
+            image: require('./Abilities/Reksai.png'),
+            name: "Burrow",
+            description: " Burrows into the ground, becoming untargetable for 2 seconds while healing each 0.5 seconds for 300 / 400 / 500 health in total. She then unburrows, dealing 150 / 200 / 250 magic damage and   knocking up for 1 second the closest enemy."
+        },
         name: "Rek'sai"
     },
-    {
+    Rengar: {
+        image: require('./ChampionsCircled/Rengar.png'),
+        origin: "Void",
+        class: "Brawler",
+        ability: {
+            image: require('./Abilities/Rengar.png'),
+            name: "Savagery",
+            description: "Leaps at the weakest enemy, dealing 210 / 320 / 430% physical damage, and gaining 50 / 65 / 80% attack speed and 25% critical strike chance for 6 seconds."
+        },
+        name: "Rengar"
+    },
+    Sejuani: {
         image: require('./ChampionsCircled/Sejuani.png'),
-        originImage: require('./Origin/Glacial.png'),
-        classImage: require('./Class/Knight.png'),
+        origin: "Glacial",
+        class: "Knight",
+        ability: {
+            image: require('./Abilities/Sejuani.png'),
+            name: "Glacial Prison",
+            description: "Creates a large glacial storm that detonates after 2 seconds, dealing 100 / 175 / 250 magic damage and  stunning for 3 / 4 / 5 seconds enemies within it."
+        },
         name: "Sejuani"
     },
-    {
+    Shen: {
         image: require('./ChampionsCircled/Shen.png'),
-        originImage: require('./Origin/Ninja.png'),
-        classImage: require('./Class/Blademaster.png'),
+        origin: "Ninja",
+        class: "Blademaster",
+        ability: {
+            image: require('./Abilities/Shen.png'),
+            name: "Spirit's Refuge",
+            description: "Creates a zone around himself for 3 / 4 / 5 seconds, allowing allies inside to  dodge all attacks."
+        },
         name: "Shen"
     },
-    {
+    Shyvana: {
         image: require('./ChampionsCircled/Shyvana.png'),
-        originImage: require('./Origin/Dragon.png'),
-        classImage: require('./Class/Shapeshifter.png'),
+        origin: "Dragon",
+        class: "Shapeshifter",
+        ability: {
+            image: require('./Abilities/Shyvana.png'),
+            name: "Dragon's Descent",
+            description: "Dashes and transforms into a ranged attacker for 60 seconds, gaining 50 / 90 / 130 attack damage and attack range. When transformed, her attacks set enemies on fire, dealing 200 / 300 / 400 magic damage over 3 seconds."
+        },
         name: "Shyvana"
     },
-    {
+    Swain: {
         image: require('./ChampionsCircled/Swain.png'),
-        originImage: require('./Origin/Demon.png'),
-        originImageSecond: require('./Origin/Imperial.png'),
-        classImage: require('./Class/Shapeshifter.png'),
+        origin: "Demon",
+        originSecond: "Imperial",
+        class: "Shapeshifter",
+        ability: {
+            image: require('./Abilities/Swain.png'),
+            name: "Demonflare",
+            description: "Transforms for 6 seconds, dealing 50 / 100 / 150 magic damage to all nearby enemies with each tick while healing for 50 / 90 / 130 health with each tick. At the end of his transformation, sends out a burst of energy dealing 300 / 600 / 900 magic damage to nearby enemies."
+        },
         name: "Swain"
     },
-    {
+    Tristana: {
         image: require('./ChampionsCircled/Tristana.png'),
-        originImage: require('./Origin/Yordle.png'),
-        classImage: require('./Class/Gunslinger.png'),
+        origin: "Yordle",
+        class: "Gunslinger",
+        ability: {
+            image: require('./Abilities/Tristana.png'),
+            name: "Explosive Charge",
+            description: "Places a bomb on her current target, that detonates after 4 seconds or 3 attacks, dealing 60 / 90 / 120 magic damage to enemies up to 2 hexes away. The damage is increased by 50% with each attack, dealing up to 150 / 225 / 300 magic damage."
+        },
         name: "Tristana"
     },
-    {
+    Varus: {
         image: require('./ChampionsCircled/Varus.png'),
-        originImage: require('./Origin/Demon.png'),
-        classImage: require('./Class/Ranger.png'),
+        origin: "Demon",
+        class: "Ranger",
+        ability: {
+            image: require('./Abilities/Varus.png'),
+            name: "Piercing Arrow",
+            description: "After charging for 1.5 seconds, fires an arrow up to 8 hexes away, dealing 400 / 600 / 800 magic damage to all enemies hit."
+        },
         name: "Varus"
     },
-    {
+    Vayne: {
         image: require('./ChampionsCircled/Vayne.png'),
-        originImage: require('./Origin/Noble.png'),
-        classImage: require('./Class/Ranger.png'),
+        origin: "Noble",
+        class: "Ranger",
+        ability: {
+            image: require('./Abilities/Vayne.png'),
+            name: "Silver Bolts",
+            description: "Every third attack against the same target deals 8 / 10 / 12% of target's maximum health bonus true damage."
+        },
         name: "Vayne"
     },
-    {
+    Veigar: {
         image: require('./ChampionsCircled/Veigar.png'),
-        originImage: require('./Origin/Yordle.png'),
-        classImage: require('./Class/Sorcerer.png'),
+        origin: "Yordle",
+        class: "Sorcerer",
+        ability: {
+            image: require('./Abilities/Veigar.png'),
+            name: "Primordial Burst",
+            description: "Deals 300 / 450 / 600 magic damage to the target enemy. If the target is a lower star level than Veigar, the target is executed."
+        },
         name: "Veigar"
     },
-    {
+    Volibear: {
         image: require('./ChampionsCircled/Volibear.png'),
-        originImage: require('./Origin/Glacial.png'),
-        classImage: require('./Class/Brawler.png'),
+        origin: "Glacial",
+        class: "Brawler",
+        ability: {
+            image: require('./Abilities/Volibear.png'),
+            name: "Thunder Claws",
+            description: "For 20 seconds, empowers his basic attacks to bounce to up to 3 / 4 / 5 enemies 1 hex away, dealing 80 / 90 / 100% physical damage to secondary targets, and applying on-hit effects."
+        },
         name: "Volibear"
     },
-    {
+    Warwick: {
         image: require('./ChampionsCircled/Warwick.png'),
-        originImage: require('./Origin/Wild.png'),
-        classImage: require('./Class/Brawler.png'),
+        origin: "Wild",
+        class: "Brawler",
+        ability: {
+            image: require('./Abilities/Warwick.png'),
+            name: "Infinite Duress",
+            description: "Pounces onto the lowest health enemy,  stunning them for 1.5 seconds, dealing 150 / 225 / 300 magic damage over 3 hits and healing over the duration."
+        },
         name: "Warwick"
     },
-    {
+    Yasuo: {
         image: require('./ChampionsCircled/Yasuo.png'),
-        originImage: require('./Origin/Exile.png'),
-        classImage: require('./Class/Blademaster.png'),
+        origin: "Exile",
+        class: "Blademaster",
+        ability: {
+            image: require('./Abilities/Yasuo.png'),
+            name: "Steel Tempest",
+            description: "Stabs fowards, dealing 150 / 250 / 350 magic damage to two enemies in a line 2 hexes away. On third cast, instead launches a tornado, dealing the same magic damage and  knocking up enemies for 1.25 seconds in a line 6 hexes away."
+        },
         name: "Yasuo"
     },
-    {
+    Zed: {
         image: require('./ChampionsCircled/Zed.png'),
-        originImage: require('./Origin/Ninja.png'),
-        classImage: require('./Class/Assassin.png'),
+        origin: "Ninja",
+        class: "Assassin",
+        ability: {
+            image: require('./Abilities/Zed.png'),
+            name: "Razor Shuriken",
+            description: "Throws a shuriken, dealing 200 / 300 / 400 magic damage to enemies in a line 4 hexes away."
+        },
         name: "Zed"
     },
-]
+}
+
+export const origin = {
+    Demon: {
+        name: "Demon",
+        image: require('./Origin/Demon.png'),
+        description: "Demons have a chance on-hit to deplete the target's current mana and deal true damage equal to the mana depleted.",
+        ability: {
+            first: {
+                amount: 2,
+                effect: "30% chance"
+            },
+            second: {
+                amount: 4,
+                effect: "50% chance"
+            },
+            third: {
+                amount: 6,
+                effect: "70% chance"
+            },
+        }
+    },
+    Dragon: {
+        name: "Dragon",
+        image: require('./Origin/Dragon.png'),
+        description: "While 2 Dragons are in play, all Dragons are immune to magic damage."
+    },
+    Exile: {
+        name: "Exile",
+        image: require('./Origin/Exile.png'),
+        description: "Exiles start combat with a shield equal to 100% of maximum health when not placed adjacent to an ally.",
+    },
+    Glacial: {
+        name: "Glacial",
+        image: require('./Origin/Glacial.png'),
+        description: "Glacials have a chance on-hit to stun for 2 seconds.",
+        ability: {
+            first: {
+                amount: 2,
+                effect: "20% chance"
+            },
+            second: {
+                amount: 4,
+                effect: "30% chance"
+            },
+            third: {
+                amount: 6,
+                effect: "45% chance"
+            },
+        }
+    },
+    Imperial: {
+        name: "Imperial",
+        image: require('./Origin/Imperial.png'),
+        description: "A select number of Imperials deal double damage.",
+        ability: {
+            first: {
+                amount: 2,
+                effect: "One imperial"
+            },
+            second: {
+                amount: 4,
+                effect: "All imperials"
+            }
+        }
+    },
+    Ninja: {
+        name: "Ninja",
+        image: require('./Origin/Ninja.png'),
+        description: "Ninjas gain a percentage of Attack Damage.",
+        ability: {
+            first: {
+                amount: 1,
+                effect: "This ninja gains 40% attack speed"
+            },
+            second: {
+                amount: 4,
+                effect: "All Ninjas gain 60% attack damage."
+            }
+        }
+    },
+    Noble: {
+        name: "Noble",
+        image: require('./Origin/Noble.png'),
+        description: "Grants 100 armor and basic attacks restore 35 health on-hit to the follow",
+        ability: {
+            first: {
+                amount: 3,
+                effect: "A random ally."
+            },
+            second: {
+                amount: 6,
+                effect: "The whole team."
+            }
+        }
+    },
+    Phantom: {
+        name: "Phantom",
+        image: require('./Origin/Phantom.png'),
+        description: "While 2 Phantoms are in play, a random enemy will begin combat with 100 health.",
+    },
+    Pirate: {
+        name: "Pirate",
+        image: require('./Origin/Pirate.png'),
+        description: "While 3 Pirates are in play, you begin each PvP round with a chest that grants between Gold 0 and 4.",
+    },
+    Robot: {
+        name: "Robot",
+        image: require('./Origin/Robot.png'),
+        description: "Robots begin combat with full mana.",
+    },
+    Void: {
+        name: "Void",
+        image: require('./Origin/Void.png'),
+        description: "While 3 Voidlings are in play, your team gains 50% armor penetration.",
+    },
+    Wild: {
+        name: "Wild",
+        image: require('./Origin/Wild.png'),
+        description: "Wildlings generate Fury on-hit, up to 5. Each stack gives 7% attack speed.",
+        ability: {
+            first: {
+                amount: 1,
+                effect: "Fury benefits all allied Wildlings."
+            },
+            second: {
+                amount: 2,
+                effect: "Fury benefits all allied Wildlings."
+            },
+            third: {
+                amount: 3,
+                effect: "Fury benefits all allies."
+            }
+        }
+    },
+    Yordle: {
+        name: "Yordle",
+        image: require('./Origin/Yordle.png'),
+        description: "Yordles have a chance to dodge enemy attacks",
+        ability: {
+            first: {
+                amount: 3,
+                effect: "20% chance"
+            },
+            second: {
+                amount: 6,
+                effect: "50% chance"
+            }
+        }
+    },
+}
+
+export const classes = {
+    Assassin: {
+        name: "Assassin",
+        image: require('./Class/Assassin.png'),
+        description: "Assassins stealth for a short duration and jump behind the farthest enemy.",
+        ability: {
+            1: {
+                amount: 3,
+                effect: "150%"
+            },
+            2: {
+                amount: 6,
+                effect: "350%"
+            }
+        }
+    },
+    Blademaster: {
+        name: "Blademaster",
+        image: require('./Class/Blademaster.png'),
+        description: "Blademasters have a 35% chance to perform a multi-attack.",
+        ability: {
+            1: {
+                amount: 3,
+                effect: "Double strike"
+            },
+            2: {
+                amount: 6,
+                effect: "Triple strike"
+            }
+        }
+    },
+    Brawler: {
+        name: "Brawler",
+        image: require('./Class/Brawler.png'),
+        description: "Brawlers gain additional maximum health.",
+        ability: {
+            1: {
+                amount: 2,
+                effect: "+300"
+            },
+            2: {
+                amount: 4,
+                effect: "+700"
+            }
+        }
+    },
+    Elementalist: {
+        name: "Elementalist",
+        image: require('./Class/Elementalist.png'),
+        description: "Beginning combat with 3 Elementalists will summon an Elemental adjacent to one of your Elementalists, in the closest empty hex to an enemy. This effect will fail if there are no valid spaces.",
+    },
+    Guardian: {
+        name: "Guardian",
+        image: require('./Class/Guardian.png'),
+        description: "Beginning combat with 2 Guardians will grant 30 armor to all units that start adjacent to a Guardian.",
+    },
+    Gunslinger: {
+        name: "Gunslinger",
+        image: require('./Class/Gunslinger.png'),
+        description: "Gunslingers have a 50% chance for their attacks to hit additional enemies.",
+        ability: {
+            1: {
+                amount: 2,
+                effect: "One additional enemy"
+            },
+            2: {
+                amount: 4,
+                effect: "All enemies in range"
+            }
+        }
+    },
+    Knight: {
+        name: "Knight",
+        image: require('./Class/Knight.png'),
+        description: "Knights ignore a flat amount of damage from basic attacks.",
+        ability: {
+            1: {
+                amount: 2,
+                effect: "20"
+            },
+            2: {
+                amount: 4,
+                effect: "40"
+            },
+            3: {
+                amount: 4,
+                effect: "60"
+            }
+        }
+    },
+    Ranger: {
+        name: "Ranger",
+        image: require('./Class/Ranger.png'),
+        description: "Every 3 seconds, Rangers have a chance to gain double attack speed for 3 seconds.",
+        ability: {
+            1: {
+                amount: 2,
+                effect: "25%"
+            },
+            2: {
+                amount: 4,
+                effect: "65%"
+            }
+        }
+    },
+    Shapeshifter: {
+        name: "Shapeshifter",
+        image: require('./Class/Shapeshifter.png'),
+        description: "While 3 Shapeshifters are in play, activating their Special Ability will grant +100% maximum health, as well as healing for the amount gained.",
+    },
+    Sorcerer: {
+        name: "Sorcerer",
+        image: require('./Class/Sorcerer.png'),
+        description: "Sorcerers grant ability power to their team.",
+        ability: {
+            1: {
+                amount: 3,
+                effect: "25"
+            },
+            2: {
+                amount: 6,
+                effect: "100"
+            }
+        }
+    }
+}

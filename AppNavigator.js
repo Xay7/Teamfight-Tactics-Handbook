@@ -11,10 +11,10 @@ const AppNavigator = createStackNavigator({
         },
     },
     Champions: Champions,
-    ChampionsInfo: ChampionInfo,
+    ChampionInfo: ChampionInfo,
 },
     {
-        initialRouteName: 'Champions',
+        initialRouteName: 'ChampionInfo',
         headerMode: 'none',
         navigationOptions: {
             headerVisible: false,

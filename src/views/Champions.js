@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Image, ScrollView, TouchableOpacity, TextInput, Text, Dimensions } from 'react-native';
-import { championCircle } from '../assets/index';
+import { champions, origin, classes } from '../assets/index';
 import bg from '../assets/bg.png';
-import SearchIcon from '../assets/UI/baseline_search_black_18dp.png';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 const Champions = (props) => {
@@ -13,42 +12,41 @@ const Champions = (props) => {
 
     const { navigate } = props.navigation;
 
-    let champions = championCircle.map((el, index) => {
+    let championsList = Object.keys(champions).map((key, i) => {
         if (inputValue.length > 0) {
-            if (el.name.toLowerCase().includes(inputValue.toLowerCase())) {
+            if (champions[key].name.toLowerCase().includes(inputValue.toLowerCase())) {
                 return <TouchableOpacity
-                    key={el.name}
-                    onPress={() => navigate('ChampionsInfo', {
-                        name: el.name
+                    key={champions[key].name}
+                    onPress={() => navigate('ChampionInfo', {
+                        name: champions[key].name
                     })}>
                     <View style={styles.championsWrapper}>
-                        <Image source={el.image} style={styles.champion} />
-                        <Text style={{ color: "white", fontSize: 24, fontWeight: "bold", marginHorizontal: 10 }}>{el.name}</Text>
-                        <Image source={el.originImage} style={styles.synergy} />
-                        {el.originImageSecond && <Image source={el.originImageSecond} style={styles.synergy} ></Image>}
-                        {el.classImageSecond && <Image source={el.classImageSecond} style={styles.synergy} ></Image>}
-                        <Image source={el.classImage} style={styles.synergy} />
+                        <Image source={champions[key].image} style={styles.champion} />
+                        <Text style={{ color: "white", fontSize: 24, fontWeight: "bold", marginHorizontal: 10 }}>{champions[key].name}</Text>
+                        <Image source={origin[champions[key].origin].image} style={styles.synergy} />
+                        {champions[key].originSecond && <Image source={origin[champions[key].originSecond].image} style={styles.synergy} ></Image>}
+                        <Image source={classes[champions[key].class].image} style={styles.synergy} />
+                        {champions[key].classSecond && <Image source={classes[champions[key].classSecond].image} style={styles.synergy} ></Image>}
                     </View>
                 </TouchableOpacity>
             } else return null;
         } else {
             return <TouchableOpacity
-                key={el.name}
-                onPress={() => navigate('ChampionsInfo', {
-                    name: el.name
+                key={champions[key].name}
+                onPress={() => navigate('ChampionInfo', {
+                    name: champions[key].name
                 })}>
                 <View style={styles.championsWrapper}>
-                    <Image source={el.image} style={styles.champion} />
-                    <Text style={{ color: "white", fontSize: 24, fontWeight: "bold", marginHorizontal: 10 }}>{el.name}</Text>
-                    <Image source={el.originImage} style={styles.synergy} />
-                    {el.originImageSecond && <Image source={el.originImageSecond} style={styles.synergy} ></Image>}
-                    {el.classImageSecond && <Image source={el.classImageSecond} style={styles.synergy} ></Image>}
-                    <Image source={el.classImage} style={styles.synergy} />
+                    <Image source={champions[key].image} style={styles.champion} />
+                    <Text style={{ color: "white", fontSize: 24, fontWeight: "bold", marginHorizontal: 10 }}>{champions[key].name}</Text>
+                    <Image source={origin[champions[key].origin].image} style={styles.synergy} />
+                    {champions[key].originSecond && <Image source={origin[champions[key].originSecond].image} style={styles.synergy} ></Image>}
+                    <Image source={classes[champions[key].class].image} style={styles.synergy} />
+                    {champions[key].classSecond && <Image source={classes[champions[key].classSecond].image} style={styles.synergy} ></Image>}
                 </View>
             </TouchableOpacity>
         }
     })
-
 
     return (
         <View style={{ flex: 1, height: height, width: width }}>
@@ -70,7 +68,7 @@ const Champions = (props) => {
                             onChangeText={(text) => useInputValue(text)} >
                         </TextInput>
                     </View>
-                    {champions}
+                    {championsList}
                 </View>
             </ScrollView>
         </View>
