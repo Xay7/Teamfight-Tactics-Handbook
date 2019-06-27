@@ -1709,7 +1709,7 @@ export const items = {
         image: require("../assets/Items/Zephyr_item.png"),
         health: 200,
         mr: 20,
-        passive: "At the start of combat, Stasis icon banishes for 5 seconds the unit that mirrors the wielder placement on the other side of the board"
+        passive: "At the start of combat, banishes for 5 seconds the unit that mirrors the wielder placement on the other side of the board"
     },
     "Warmog's Armor": {
         name: "Warmog's Armor",
