@@ -2,6 +2,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Homepage from './src/views/Homepage';
 import Champions from './src/views/Champions';
 import ChampionInfo from './src/views/ChampionInfo';
+import Items from './src/views/Items';
 
 const AppNavigator = createStackNavigator({
     Home: {
@@ -12,9 +13,10 @@ const AppNavigator = createStackNavigator({
     },
     Champions: Champions,
     ChampionInfo: ChampionInfo,
+    Items: Items,
 },
     {
-        initialRouteName: 'Champions',
+        initialRouteName: 'Items',
         headerMode: 'none',
         navigationOptions: {
             headerVisible: false,

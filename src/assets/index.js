@@ -1396,3 +1396,25 @@ export const tiers = {
         image: require('../assets/Tiers/5.png')
     }
 }
+
+export const items = {
+    "B.F Sword": {
+        name: "B.F Sword",
+        image: "../assets/Items/B.F._Sword_item.png",
+        ad: 20,
+        recipes: {
+            "Infinity Edge": "B.F Sword"
+        }
+    },
+    "Recurve Bow": {
+        name: "Recurve Bow",
+        image: "../assets/Items/Recurve_Bow_item.png",
+        as: 15,
+    },
+    "Infinity Edge": {
+        name: "Infinity Edge",
+        image: "../assets/Items/B.F._Sword_item.png",
+        ad: 40,
+        passive: "100% critical strike damage"
+    }
+}

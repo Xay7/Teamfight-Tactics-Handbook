@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
 import Footer from '../components/Footer';
+import Background from '../components/Background';
 
 const Homepage = (props) => {
 
@@ -8,6 +9,7 @@ const Homepage = (props) => {
 
     return (
         <View style={styles.container}>
+            <Background />
             <ScrollView>
                 <Button title="Yo xd" onPress={() => navigate('Champions')} />
             </ScrollView>

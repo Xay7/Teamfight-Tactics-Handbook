@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Image, ScrollView, TouchableOpacity, TextInput, Text, Dimensions, ActivityIndicator } from 'react-native';
-import { champions, origin, classes, tiers } from '../assets/index';
+import { champions, origin, classes } from '../assets/index';
 import bg from '../assets/bg.png';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Footer from '../components/Footer';
+import Background from '../components/Background';
 
 const Champions = (props) => {
 
@@ -31,7 +32,7 @@ const Champions = (props) => {
                     })}>
                     <View style={styles.allChampionsWrapper}>
                         <Image source={allChampions[key].image} style={styles.champion} />
-                        <Text style={{ color: "white", fontSize: 24, fontWeight: "bold", marginHorizontal: 10 }}>{allChampions[key].name}</Text>
+                        <Text style={{ color: "white", fontSize: 20, fontWeight: "bold", marginHorizontal: 10 }}>{allChampions[key].name}</Text>
                         <Image source={origin[allChampions[key].origin].image} style={styles.synergy} />
                         {allChampions[key].originSecond && <Image source={origin[allChampions[key].originSecond].image} style={styles.synergy} ></Image>}
                         <Image source={classes[allChampions[key].class].image} style={styles.synergy} />
@@ -47,7 +48,6 @@ const Champions = (props) => {
                 })}>
                 <View style={styles.allChampionsWrapper}>
                     <Image source={allChampions[key].image} style={styles.champion} />
-                    {tiers[allChampions[key].tier] && <Image source={tiers[allChampions[key].tier].image} style={{ width: 15, height: 15 }} />}
                     <Text style={{ color: "white", fontSize: 20, fontWeight: "bold", marginHorizontal: 10 }}>{allChampions[key].name}</Text>
                     <Image source={origin[allChampions[key].origin].image} style={styles.synergy} />
                     {allChampions[key].originSecond && <Image source={origin[allChampions[key].originSecond].image} style={styles.synergy} ></Image>}
@@ -60,14 +60,7 @@ const Champions = (props) => {
 
     return (
         <View style={{ flex: 1, height: height, width: width }}>
-            <Image source={bg}
-                style={{
-                    position: "absolute",
-                    height: "100%",
-                    width: "100%",
-                    top: 0,
-                    left: 0,
-                }} resizeMode="cover" />
+            <Background />
             <ScrollView>
                 <View style={styles.container}  >
                     <View style={styles.searchContainer} >

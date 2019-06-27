@@ -11,7 +11,9 @@ const Footer = (props) => {
             <TouchableOpacity onPress={() => props.navigation.navigate('Champions')}>
                 <Text style={{ color: "white" }} >Champions</Text>
             </TouchableOpacity>
-            <Text style={{ color: "white" }}>Items</Text>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Items')}>
+                <Text style={{ color: "white" }}>Items</Text>
+            </TouchableOpacity>
         </View>
     )
 }
