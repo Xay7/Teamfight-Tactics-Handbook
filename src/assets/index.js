@@ -1400,21 +1400,357 @@ export const tiers = {
 export const items = {
     "B.F Sword": {
         name: "B.F Sword",
-        image: "../assets/Items/B.F._Sword_item.png",
+        image: require("../assets/Items/B.F._Sword_item.png"),
         ad: 20,
         recipes: {
-            "Infinity Edge": "B.F Sword"
+            "Infinity Edge": "B.F Sword",
+            "Sword of the Divine": "Recurve Bow",
+            "Hextech Gunblade": "Needlessly Large Rod",
+            "Spear of Shojin": "Tear of the Goddess",
+            "Guardian Angel": "Chain Vest",
+            "Bloodthirster": "Negatron Cloak",
+            "Zeke's Herald": "Giant's Belt",
+            "Youmuu's Ghostblade": "Spatula"
         }
     },
     "Recurve Bow": {
         name: "Recurve Bow",
-        image: "../assets/Items/Recurve_Bow_item.png",
+        image: require("../assets/Items/Recurve_Bow_item.png"),
         as: 15,
+        recipes: {
+            "Sword of the Divine": "B.F Sword",
+            "Rapid Firecannon": "Recurve Bow",
+            "Guinsoo's Rageblade": "Needlessly Large Rod",
+            "Statikk Shiv": "Tear of the Goddess",
+            "Phantom Dancer": "Chain Vest",
+            "Cursed Blade": "Negatron Cloak",
+            "Titanic Hydra": "Giant's Belt",
+            "Blade of the Ruined King": "Spatula"
+        }
+    },
+    "Needlessly Large Rod": {
+        name: "Needlessly Large Rod",
+        image: require("../assets/Items/Needlessly_Large_Rod_item.png"),
+        ap: 15,
+        recipes: {
+            "Hextech Gunblade": "B.F Sword",
+            "Guinsoo's Rageblade": "Recurve Bow",
+            "Rabadon's Deathcap": "Needlessly Large Rod",
+            "Luden's Echo": "Tear of the Goddess",
+            "Locket of the Iron Solari": "Chain Vest",
+            "Ionic Spark": "Negatron Cloak",
+            "Morellonomicon": "Giant's Belt",
+            "Yuumi": "Spatula"
+        }
+    },
+    "Tear of the Goddess": {
+        name: "Tear of the Goddess",
+        image: require("../assets/Items/Tear_of_the_Goddess_item.png"),
+        mana: 20,
+        recipes: {
+            "Spear of Shojin": "B.F Sword",
+            "Statikk Shiv": "Recurve Bow",
+            "Luden's Echo": "Needlessly Large Rod",
+            "Seraph's Embrace": "Tear of the Goddess",
+            "Frozen Heart": "Chain Vest",
+            "Hush": "Negatron Cloak",
+            "Redemption": "Giant's Belt",
+            "Darkin": "Spatula"
+        }
+    },
+    "Chain Vest": {
+        name: "Chain Vest",
+        image: require("../assets/Items/Chain_Vest_item.png"),
+        armor: 20,
+        recipes: {
+            "Guardian Angel": "B.F Sword",
+            "Phantom Dancer": "Recurve Bow",
+            "Locket of the Iron Solari": "Needlessly Large Rod",
+            "Frozen Heart": "Tear of the Goddess",
+            "Thornmail": "Chain Vest",
+            "Sword Breaker": "Negatron Cloak",
+            "Red Buff": "Giant's Belt",
+            "Knight's Vow": "Spatula"
+        }
+    },
+    "Negatron Cloak": {
+        name: "Negatron Cloak",
+        image: require("../assets/Items/Negatron_Cloak_item.png"),
+        mr: 20,
+        recipes: {
+            "Bloodthirster": "B.F Sword",
+            "Cursed Blade": "Recurve Bow",
+            "Ionic Spark": "Needlessly Large Rod",
+            "Hush": "Tear of the Goddess",
+            "Sword Breaker": "Chain Vest",
+            "Dragon's Claw": "Negatron Cloak",
+            "Zephyr": "Giant's Belt",
+            "Runaan's Hurricane": "Spatula"
+        }
+    },
+    "Giant's Belt": {
+        name: "Giant's Belt",
+        image: require("../assets/Items/Giant's_Belt_item.png"),
+        hp: 200,
+        recipes: {
+            "Zeke's Herald": "B.F Sword",
+            "Titanic Hydra": "Recurve Bow",
+            "Morellonomicon": "Needlessly Large Rod",
+            "Redemption": "Tear of the Goddess",
+            "Red Buff": "Chain Vest",
+            "Zephyr": "Negatron Cloak",
+            "Warmog's Armor": "Giant's Belt",
+            "Frozen Mallet": "Spatula"
+        }
+    },
+    "Spatula": {
+        name: "Spatula",
+        image: require("../assets/Items/Spatula_item.png"),
+        recipes: {
+            "Youmuu's Ghostblade": "B.F Sword",
+            "Blade of the Ruined King": "Recurve Bow",
+            "Yuumi": "Needlessly Large Rod",
+            "Darkin": "Tear of the Goddess",
+            "Knight's Vow": "Chain Vest",
+            "Runaan's Hurricane": "Negatron Cloak",
+            "Frozen Mallet": "Giant's Belt",
+            "Force of Nature": "Spatula"
+        }
     },
     "Infinity Edge": {
         name: "Infinity Edge",
-        image: "../assets/Items/B.F._Sword_item.png",
+        image: require("../assets/Items/Infinity_Edge_item.png"),
         ad: 40,
         passive: "100% critical strike damage"
-    }
+    },
+    "Sword of the Divine": {
+        name: "Sword of the Divine",
+        image: require("../assets/Items/Sword_of_the_Divine_item.png"),
+        ad: 20,
+        as: 15,
+        passive: "Every second, has a 5% chance to gain 100% critical strike chance until the end of combat."
+    },
+    "Spear of Shojin": {
+        name: "Spear of Shojin",
+        image: require("../assets/Items/Spear_of_Shojin_item.png"),
+        ad: 20,
+        mana: 20,
+        passive: "After casting Special Ability for the first time, gain: Basic attacks restore an additional 15% of maximum mana on-hit."
+    },
+    "Hextech Gunblade": {
+        name: "Hextech Gunblade",
+        image: require("../assets/Items/Hextech_Gunblade_item.png"),
+        ad: 20,
+        ap: 20,
+        passive: "Heal for 25% of damage dealt."
+    },
+    "Guardian Angel": {
+        name: "Guardian Angel",
+        image: require("../assets/Items/Guardian_Angel_item.png"),
+        ad: 20,
+        armor: 20,
+        passive: "Upon death, revive with 500 health."
+    },
+    "Bloodthirster": {
+        name: "Bloodthirster",
+        image: require("../assets/Items/The_Bloodthirster_item.png"),
+        ad: 20,
+        mr: 20,
+        passive: "Heal for 50% of damage dealt by basic attacks."
+    },
+    "Zeke's Herald": {
+        name: "Zeke's Herald",
+        image: require("../assets/Items/Zeke's_Herald_item.png"),
+        ad: 20,
+        hp: 200,
+        passive: "At the beginning of combat, all adjacent allies gain 10% attack speed."
+    },
+    "Youmuu's Ghostblade": {
+        name: "Youmuu's Ghostblade",
+        image: require("../assets/Items/Youmuu's_Ghostblade_item.png"),
+        ad: 20,
+        passive: "Becomes an Assassin."
+    },
+    "Rapid Firecannon": {
+        name: "Rapid Firecannon",
+        image: require("../assets/Items/Rapid_Firecannon_item.png"),
+        as: 30,
+        passive: "Doubles attack range. Basic attacks cannot miss."
+    },
+    "Guinsoo's Rageblade": {
+        name: "Guinsoo's Rageblade",
+        image: require("../assets/Items/Guinsoo's_Rageblade_item.png"),
+        as: 15,
+        ap: 20,
+        passive: "Gain 3% attack speed on-hit. Stacks with no upper limit."
+    },
+    "Redemption": {
+        name: "Redemption",
+        image: require("../assets/Items/Redemption_item.png"),
+        mana: 20,
+        hp: 200,
+        passive: "On death, after a small delay, heal nearby allies for 1000 health."
+    },
+    "Red Buff": {
+        name: "Red Buff",
+        image: require("../assets/Items/Red_BramblebackSquare.png"),
+        armor: 20,
+        hp: 200,
+        passive: "Basic attacks apply Grievous Wounds."
+    },
+    "Statikk Shiv": {
+        name: "Statikk Shiv",
+        image: require("../assets/Items/Statikk_Shiv_item.png"),
+        mana: 20,
+        as: 15,
+        passive: "Every third attack deals 100 magic damage to the target and all adjacent enemies."
+    },
+    "Phantom Dancer": {
+        name: "Phantom Dancer",
+        image: require("../assets/Items/Phantom_Dancer_item.png"),
+        armor: 20,
+        as: 15,
+        passive: "Dodge all critical strikes."
+    },
+    "Cursed Blade": {
+        name: "Cursed Blade",
+        image: require("../assets/Items/Dervish_Blade_item.png"),
+        mr: 20,
+        as: 15,
+        passive: "Basic attacks have a chance to Subjugate shrink the target, removing 1 Star."
+    },
+    "Titanic Hydra": {
+        name: "Titanic Hydra",
+        image: require("../assets/Items/Titanic_Hydra_item.png"),
+        hp: 200,
+        as: 15,
+        passive: "Basic attacks deal 10% of your maximum health bonus damage to the target and all adjacent enemies."
+    },
+    "Blade of the Ruined King": {
+        name: "Blade of the Ruined King",
+        image: require("../assets/Items/Blade_of_the_Ruined_King_item.png"),
+        as: 15,
+        passive: "Becomes a Blademaster."
+    },
+    "Rabadon's Deathcap": {
+        name: "Rabadon's Deathcap",
+        image: require("../assets/Items/Rabadon's_Deathcap_item.png"),
+        ap: 40,
+        passive: "Increases ability power by 50%."
+    },
+    "Luden's Echo": {
+        name: "Luden's Echo",
+        image: require("../assets/Items/Luden's_Echo_item.png"),
+        ap: 20,
+        mana: 20,
+        passive: "Special Ability deals 200 magic damage to all adjacent enemies."
+    },
+    "Locket of the Iron Solari": {
+        name: "Locket of the Iron Solari",
+        image: require("../assets/Items/Locket_of_the_Iron_Solari_item.png"),
+        ap: 20,
+        armor: 20,
+        passive: "At the beginning of combat, all adjacent allies gain a 200 health shield."
+    },
+    "Ionic Spark": {
+        name: "Ionic Spark",
+        image: require("../assets/Items/Ionic_Spark_item.png"),
+        ap: 20,
+        mr: 20,
+        passive: "Enemies take 200 magic damage whenever they cast their Special Ability."
+    },
+    "Morellonomicon": {
+        name: "Morellonomicon",
+        image: require("../assets/Items/Morellonomicon_item.png"),
+        ap: 20,
+        health: 200,
+        passive: "Spells deal burn damage equal to 10% of the enemy's maximum health per second."
+    },
+    "Yuumi": {
+        name: "Yuumi",
+        image: require("../assets/Items/You_and_Me!.png"),
+        ap: 20,
+        passive: "Becomes a Sorcerer."
+    },
+    "Seraph's Embrace": {
+        name: "Seraph's Embrace",
+        image: require("../assets/Items/Seraph's_Embrace_item.png"),
+        mana: 40,
+        passive: "After casting Special Ability, gain 20 mana."
+    },
+    "Frozen Heart": {
+        name: "Frozen Heart",
+        image: require("../assets/Items/Frozen_Heart_item.png"),
+        mana: 20,
+        armor: 20,
+        passive: "Adjacent enemies have their attack speed reduced by 20%."
+    },
+    "Thornmail": {
+        name: "Thornmail",
+        image: require("../assets/Items/Thornmail_item.png"),
+        armor: 40,
+        passive: "Reflect 30% of damage taken from basic attacks."
+    },
+    "Sword Breaker": {
+        name: "Sword Breaker",
+        image: require("../assets/Items/Sword_Breaker_item.png"),
+        armor: 20,
+        mr: 20,
+        passive: "Basic attacks have a chance to disarm the target."
+    },
+    "Dragon's Claw": {
+        name: "Dragon's Claw",
+        image: require("../assets/Items/Dragon's_Claw_item.png"),
+        mr: 40,
+        passive: "Gain 83% resistance to magic damage."
+    },
+    "Zephyr": {
+        name: "Zephyr",
+        image: require("../assets/Items/Zephyr_item.png"),
+        health: 200,
+        mr: 20,
+        passive: "At the start of combat, Stasis icon banishes for 5 seconds the unit that mirrors the wielder placement on the other side of the board"
+    },
+    "Warmog's Armor": {
+        name: "Warmog's Armor",
+        image: require("../assets/Items/Warmog's_Armor_item.png"),
+        health: 400,
+        passive: "Regenerates 3% of maximum health per second."
+    },
+    "Frozen Mallet": {
+        name: "Frozen Mallet",
+        image: require("../assets/Items/Frozen_Mallet_item.png"),
+        health: 200,
+        passive: "Becomes a Glacial."
+    },
+    "Hush": {
+        name: "Hush",
+        image: require("../assets/Items/Hush_item.png"),
+        mana: 20,
+        mr: 20,
+        passive: "Basic attacks have a high chance to silence the target."
+    },
+    "Darkin": {
+        name: "Darkin",
+        image: require("../assets/Items/World_Ender.png"),
+        mana: 20,
+        passive: "Becomes a Demon."
+    },
+    "Knight's Vow": {
+        name: "Knight's Vow",
+        image: require("../assets/Items/Knight's_Vow_item.png"),
+        armor: 20,
+        passive: "Becomes a Knight."
+    },
+    "Runaan's Hurricane": {
+        name: "Runaan's Hurricane",
+        image: require("../assets/Items/Runaan's_Hurricane_item.png"),
+        mr: 20,
+        passive: "Basic attacks hit 2 additional targets for 50% damage."
+    },
+    "Force of Nature": {
+        name: "Force of Nature",
+        image: require("../assets/Items/Force_of_Nature_item.png"),
+        passive: "Increases the unit cap by 1."
+    },
 }
