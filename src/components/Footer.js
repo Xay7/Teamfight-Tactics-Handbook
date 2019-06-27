@@ -6,13 +6,16 @@ const Footer = (props) => {
     return (
         <View style={styles.container}>
             < TouchableOpacity onPress={() => props.navigation.navigate('Home')}>
-                <Text style={{ color: "white" }} >Home</Text>
+                <Text style={{ color: "white" }} >News</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => props.navigation.navigate('Champions')}>
                 <Text style={{ color: "white" }} >Champions</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => props.navigation.navigate('Items')}>
                 <Text style={{ color: "white" }}>Items</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Synergies')}>
+                <Text style={{ color: "white" }}>Synergies</Text>
             </TouchableOpacity>
         </View>
     )
