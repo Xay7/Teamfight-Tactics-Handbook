@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, ScrollView, Dimensions } from 'react-native';
-import bg from '../assets/bg.png';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import Health from '../assets/UI/health.png';
 import Cost from '../assets/UI/cost.png';
 import Mana from '../assets/UI/mana.png';
@@ -11,8 +10,7 @@ import MagicResist from '../assets/UI/magicresist.png';
 import Armor from '../assets/UI/armor.png';
 import Footer from '../components/Footer';
 import Synergy from '../components/Synergy';
-
-const { width, height } = Dimensions.get('screen');
+import Background from '../components/Background';
 
 const ChampionInfo = (props) => {
 
@@ -27,14 +25,7 @@ const ChampionInfo = (props) => {
 
     return (
         <View style={{ flex: 1 }}>
-            <Image source={bg}
-                style={{
-                    position: "absolute",
-                    height: height,
-                    width: width,
-                    top: 0,
-                    left: 0,
-                }} resizeMode="cover" />
+            <Background />
             <ScrollView>
                 <View style={styles.container}>
                     <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", marginVertical: 20 }}>
@@ -44,13 +35,13 @@ const ChampionInfo = (props) => {
                     <View style={styles.headerContainer}>
                         <View style={{ marginRight: 5, alignItems: "center" }}>
                             <Image source={champion.image} style={{ height: 100, width: 100 }} />
+                            <View style={styles.statsWrapper}>
+                                <Image source={Cost} style={{ height: 24, width: 24 }} />
+                                <Text style={{ color: "#FFD700", fontSize: 20, marginLeft: 5 }}>{champion.stats.cost}$</Text>
+                            </View>
                         </View>
-                        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+                        <View style={{ flexDirection: "row", justifyContent: "space-between", flexShrink: 1 }}>
                             <View>
-                                <View style={styles.statsWrapper}>
-                                    <Image source={Cost} />
-                                    <Text style={styles.statsText}>{champion.stats.cost}$</Text>
-                                </View>
                                 <View style={styles.statsWrapper}>
                                     <Image source={Health} />
                                     <Text style={styles.statsText}>{champion.stats.health}</Text>
@@ -63,12 +54,12 @@ const ChampionInfo = (props) => {
                                     <Image source={Damage} />
                                     <Text style={styles.statsText}>{champion.stats.damage}</Text>
                                 </View>
-                            </View>
-                            <View style={{ marginLeft: 10 }}>
                                 <View style={styles.statsWrapper}>
                                     <Image source={AttackSpeed} />
                                     <Text style={styles.statsText}>{champion.stats.attackSpeed}</Text>
                                 </View>
+                            </View>
+                            <View style={{ marginLeft: 10 }}>
                                 <View style={styles.statsWrapper}>
                                     <Image source={AttackRange} />
                                     <Text style={styles.statsText}>{champion.stats.attackRange}</Text>
@@ -85,18 +76,18 @@ const ChampionInfo = (props) => {
                         </View>
                     </View>
                     <View style={styles.synergiesContainer}>
-                        <View style={styles.synergyContainer}>
-                            <Image source={champion.ability.image} style={styles.synergy} />
-                            <View style={styles.synergyDescriptionContainer}>
-                                <Text style={styles.textHeader}>{champion.ability.name}</Text>
-                                <Text style={styles.text}>{champion.ability.description}</Text>
-                            </View>
-                        </View>
+                        <Synergy
+                            image={champion.ability.image}
+                            description={champion.ability.description}
+                            name={champion.ability.name}
+                            navigation={props.navigation}
+                        />
                         <Synergy
                             image={firstOrigin.image}
                             ability={firstOrigin.ability && firstOrigin.ability}
                             name={firstOrigin.name}
                             description={firstOrigin.description}
+                            navigation={props.navigation}
                         />
                         {secondOrigin &&
                             <Synergy
@@ -104,6 +95,7 @@ const ChampionInfo = (props) => {
                                 ability={secondOrigin.ability && secondOrigin.ability}
                                 name={secondOrigin.name}
                                 description={secondOrigin.description}
+                                navigation={props.navigation}
                             />
                         }
                         <Synergy
@@ -111,6 +103,7 @@ const ChampionInfo = (props) => {
                             ability={firstClass.ability && firstClass.ability}
                             name={firstClass.name}
                             description={firstClass.description}
+                            navigation={props.navigation}
                         />
                         {secondClass &&
                             <Synergy
@@ -118,6 +111,7 @@ const ChampionInfo = (props) => {
                                 ability={secondClass.ability && secondClass.ability}
                                 name={secondClass.name}
                                 description={secondClass.description}
+                                navigation={props.navigation}
                             />
                         }
                     </View>
@@ -167,7 +161,7 @@ const styles = StyleSheet.create({
         marginVertical: 5,
     },
     text: {
-        color: "#DDD",
+        color: "#CCC",
         fontSize: 16,
         paddingVertical: 3
     },
@@ -181,9 +175,9 @@ const styles = StyleSheet.create({
         padding: 4
     },
     statsText: {
-        fontSize: 14,
-        color: "white",
-        paddingLeft: 2
+        fontSize: 12,
+        color: "#CCC",
+        paddingLeft: 5
     }
 })
 
