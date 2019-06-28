@@ -1111,15 +1111,15 @@ export const origin = {
         image: require('./Origin/Demon.png'),
         description: "Demons have a chance on-hit to deplete the target's current mana and deal true damage equal to the mana depleted.",
         ability: {
-            first: {
+            1: {
                 amount: 2,
                 effect: "30% chance"
             },
-            second: {
+            2: {
                 amount: 4,
                 effect: "50% chance"
             },
-            third: {
+            3: {
                 amount: 6,
                 effect: "70% chance"
             },
@@ -1140,15 +1140,15 @@ export const origin = {
         image: require('./Origin/Glacial.png'),
         description: "Glacials have a chance on-hit to stun for 2 seconds.",
         ability: {
-            first: {
+            1: {
                 amount: 2,
                 effect: "20% chance"
             },
-            second: {
+            2: {
                 amount: 4,
                 effect: "30% chance"
             },
-            third: {
+            3: {
                 amount: 6,
                 effect: "45% chance"
             },
@@ -1159,11 +1159,11 @@ export const origin = {
         image: require('./Origin/Imperial.png'),
         description: "A select number of Imperials deal double damage.",
         ability: {
-            first: {
+            1: {
                 amount: 2,
                 effect: "One imperial"
             },
-            second: {
+            2: {
                 amount: 4,
                 effect: "All imperials"
             }
@@ -1174,11 +1174,11 @@ export const origin = {
         image: require('./Origin/Ninja.png'),
         description: "Ninjas gain a percentage of Attack Damage.",
         ability: {
-            first: {
+            1: {
                 amount: 1,
                 effect: "This ninja gains 40% attack speed"
             },
-            second: {
+            2: {
                 amount: 4,
                 effect: "All Ninjas gain 60% attack damage."
             }
@@ -1189,11 +1189,11 @@ export const origin = {
         image: require('./Origin/Noble.png'),
         description: "Grants 100 armor and basic attacks restore 35 health on-hit to the follow",
         ability: {
-            first: {
+            1: {
                 amount: 3,
                 effect: "A random ally."
             },
-            second: {
+            2: {
                 amount: 6,
                 effect: "The whole team."
             }
@@ -1224,15 +1224,15 @@ export const origin = {
         image: require('./Origin/Wild.png'),
         description: "Wildlings generate Fury on-hit, up to 5. Each stack gives 7% attack speed.",
         ability: {
-            first: {
+            1: {
                 amount: 1,
                 effect: "Fury benefits all allied Wildlings."
             },
-            second: {
+            2: {
                 amount: 2,
                 effect: "Fury benefits all allied Wildlings."
             },
-            third: {
+            3: {
                 amount: 3,
                 effect: "Fury benefits all allies."
             }
@@ -1243,11 +1243,11 @@ export const origin = {
         image: require('./Origin/Yordle.png'),
         description: "Yordles have a chance to dodge enemy attacks",
         ability: {
-            first: {
+            1: {
                 amount: 3,
                 effect: "20% chance"
             },
-            second: {
+            2: {
                 amount: 6,
                 effect: "50% chance"
             }
