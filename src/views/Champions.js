@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Image, ScrollView, TouchableOpacity, TextInput, Text, Dimensions, ActivityIndicator } from 'react-native';
+import { StyleSheet, View, Image, ScrollView, TouchableOpacity, TextInput, Text, Dimensions, Picker } from 'react-native';
 import { champions, origin, classes } from '../assets/index';
-import bg from '../assets/bg.png';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Footer from '../components/Footer';
 import Background from '../components/Background';
+import Input from '../components/Input';
 
 const Champions = (props) => {
 
-    const [allChampions, setAllChampions] = useState([])
-    const [loading, setLoading] = useState(true)
-
-    useEffect(() => {
-        setAllChampions(champions);
-        setLoading(false);
-    }, [])
+    const [allChampions, setAllChampions] = useState(champions)
 
     const { width, height } = Dimensions.get('screen');
 
@@ -62,27 +56,8 @@ const Champions = (props) => {
         <View style={{ flex: 1, height: height, width: width }}>
             <Background />
             <ScrollView>
-                <View style={styles.container}  >
-                    <View style={styles.searchContainer} >
-                        <Icon
-                            name="search1"
-                            size={25}
-                            color="#000"
-                            style={{
-                                backgroundColor: "#EEE",
-                                padding: 25 / 2,
-                                borderBottomLeftRadius: 5,
-                                borderTopLeftRadius: 5
-                            }} />
-                        <TextInput
-                            style={styles.search}
-                            placeholder="Find champion"
-                            onChangeText={(text) => useInputValue(text)} >
-                        </TextInput>
-                    </View>
-                    {loading && <ActivityIndicator size={72} color="#eeeeee" />}
-                    {championsList}
-                </View>
+                <Input onChange={useInputValue} placeholder="Find champions" />
+                {championsList}
             </ScrollView>
             <Footer navigation={props.navigation} />
         </View>
