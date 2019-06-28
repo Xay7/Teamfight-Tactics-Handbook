@@ -46,11 +46,10 @@ const Homepage = (props) => {
         displayNews = <ActivityIndicator size={72} color="#eeeeee" />
     } else {
         displayNews = news.map(el => {
-            console.log(el.description);
             return <View style={{ flex: 1, }} key={el.published}>
                 <View style={styles.newsContainer}>
-                    <TouchableOpacity style={{ alignItems: "center" }} onPress={() => Linking.openURL(el.links[0].url)}>
-                        <Image source={{ uri: el.image }} style={{ width: width, height: height * 0.28 }} resizeMode="contain" />
+                    <TouchableOpacity style={{ width: "100%", height: 200, alignItems: "center" }} onPress={() => Linking.openURL(el.links[0].url)}>
+                        <Image source={{ uri: el.image }} style={{ width: "100%", height: "100%" }} resizeMode="contain" />
                     </TouchableOpacity>
                     <Text style={styles.newsTitle}>{el.title}</Text>
                     <Text style={styles.newsDescription}>{el.description}</Text>

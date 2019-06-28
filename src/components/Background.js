@@ -1,6 +1,6 @@
 import React from 'react'
-import { Image } from 'react-native';
-import bg from '../assets/bg.png';
+import { Image, Dimensions } from 'react-native';
+import bg from '../assets/bg.jpg';
 
 const Background = () => {
     return (

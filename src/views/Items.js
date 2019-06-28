@@ -82,7 +82,8 @@ const Items = (props) => {
                     </View>}
             </View>
             <View style={{ flexShrink: 1 }}>
-                <Text style={{ color: "#EEE" }}>{items[el].passive}</Text>
+                <Text style={{ color: "#00FF00", fontSize: 18 }}>{items[el].name}</Text>
+                <Text style={{ color: "#F0E68C" }}>{items[el].passive}</Text>
             </View>
         </View >
     })
@@ -134,8 +135,8 @@ const styles = StyleSheet.create({
     topImageSelected: {
         width: 48,
         height: 48,
-        borderWidth: 2,
-        borderColor: "green"
+        borderWidth: 3,
+        borderColor: "#00FF00"
     },
     topImageWrapper: {
         flexDirection: "row",
