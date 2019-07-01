@@ -1,16 +1,26 @@
-import React, { useState } from 'react';
-import { View, Text, ScrollView, } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, ScrollView } from 'react-native';
 import Background from '../components/Background';
 import { origin, classes } from '../assets/index';
 import Footer from '../components/Footer';
 import Synergy from '../components/Synergy';
 import Input from '../components/Input';
+import Loader from '../components/Loader';
 
 const Synergies = (props) => {
 
     const [inputValue, useInputValue] = useState('');
+    const [originList, setOriginList] = useState([]);
+    const [classesList, setClassesList] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    const origins = Object.keys(origin).map((el, index) => {
+    useEffect(() => {
+        setOriginList(Object.keys(origin))
+        setClassesList(Object.keys(classes))
+        setLoading(false);
+    }, []);
+
+    const origins = originList.map((el, index) => {
         if (inputValue.length > 0) {
             if (el.toLowerCase().includes(inputValue.toLowerCase())) {
                 return <View style={{ flex: 1, flexDirection: "column", flexWrap: "wrap", alignItems: "center", marginHorizontal: 20 }} key={index}>
@@ -35,7 +45,7 @@ const Synergies = (props) => {
             </View>
     })
 
-    const classs = Object.keys(classes).map((el, index) => {
+    const classs = classesList.map((el, index) => {
         if (inputValue.length > 0) {
             if (el.toLowerCase().includes(inputValue.toLowerCase())) {
                 return <View style={{ flex: 1, flexDirection: "column", flexWrap: "wrap", alignItems: "center", marginHorizontal: 20 }} key={index}>
@@ -65,6 +75,7 @@ const Synergies = (props) => {
             <Background />
             <ScrollView>
                 <Input placeholder="Find synergies" onChange={useInputValue} />
+                {loading && <Loader />}
                 {origins}
                 {classs}
             </ScrollView>
