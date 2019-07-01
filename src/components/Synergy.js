@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { champions } from '../assets/index';
 
 const ChampionAbility = (props) => {
+
+    const [championList, setChampionsList] = useState([])
+
+    useEffect(() => {
+        setChampionsList(Object.keys(champions))
+    }, [])
+
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{
+            flex: 1, paddingTop: 10,
+            marginHorizontal: 10
+        }}>
             <View style={styles.synergyContainer}>
                 <Image source={props.image} style={styles.synergy} />
                 <View style={styles.synergyDescriptionContainer}>
@@ -12,20 +22,20 @@ const ChampionAbility = (props) => {
                     <Text style={styles.text}>{props.description}</Text>
                     {props.ability ? props.ability[1] ?
                         <View style={styles.synergyAbilityContainer}>
-                            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{props.ability[1].amount}</Text>
-                            <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{props.ability[1].effect}</Text>
+                            <Text style={styles.amount}>{props.ability[1].amount}</Text>
+                            <Text style={styles.effect}>{props.ability[1].effect}</Text>
                         </View>
                         : null : null}
                     {props.ability ? props.ability[2] ?
                         <View style={styles.synergyAbilityContainer}>
-                            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{props.ability[2].amount}</Text>
-                            <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{props.ability[2].effect}</Text>
+                            <Text style={styles.amount}>{props.ability[2].amount}</Text>
+                            <Text style={styles.effect}>{props.ability[2].effect}</Text>
                         </View>
                         : null : null}
                     {props.ability ? props.ability[3] ?
                         <View style={styles.synergyAbilityContainer}>
-                            <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>{props.ability[3].amount}</Text>
-                            <Text style={{ color: "#AAA", paddingLeft: 20, fontSize: 16 }}>{props.ability[3].effect}</Text>
+                            <Text style={styles.amount}>{props.ability[3].amount}</Text>
+                            <Text style={styles.effect}>{props.ability[3].effect}</Text>
                         </View>
                         : null : null}
 
@@ -35,7 +45,7 @@ const ChampionAbility = (props) => {
                 </View>
             </View>
             <View style={styles.championsContainer}>
-                {Object.keys(champions).map(el => {
+                {championList.map(el => {
                     if (props.name === champions[el].origin) {
                         return <TouchableOpacity onPress={() => props.navigation.navigate('ChampionInfo', {
                             name: el
@@ -66,7 +76,6 @@ const styles = StyleSheet.create({
     synergyContainer: {
         flexDirection: "row",
         width: "100%",
-        paddingTop: 10,
     },
     synergyDescriptionContainer: {
         flex: 1,
@@ -80,7 +89,7 @@ const styles = StyleSheet.create({
     text: {
         color: "#CCC",
         fontSize: 16,
-        paddingVertical: 3
+        flexShrink: 1
     },
     textHeader: {
         fontSize: 24,
@@ -94,6 +103,16 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         paddingVertical: 5
+    },
+    amount: {
+        color: "white",
+        fontSize: 18,
+        fontWeight: "bold"
+    },
+    effect: {
+        color: "#AAA",
+        paddingLeft: 20,
+        fontSize: 16
     }
 })
 
