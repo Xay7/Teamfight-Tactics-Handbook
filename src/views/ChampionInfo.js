@@ -75,46 +75,44 @@ const ChampionInfo = (props) => {
                             </View>
                         </View>
                     </View>
-                    <View style={styles.synergiesContainer}>
+                    <Synergy
+                        image={champion.ability.image}
+                        description={champion.ability.description}
+                        name={champion.ability.name}
+                        navigation={props.navigation}
+                    />
+                    <Synergy
+                        image={firstOrigin.image}
+                        ability={firstOrigin.ability && firstOrigin.ability}
+                        name={firstOrigin.name}
+                        description={firstOrigin.description}
+                        navigation={props.navigation}
+                    />
+                    {secondOrigin &&
                         <Synergy
-                            image={champion.ability.image}
-                            description={champion.ability.description}
-                            name={champion.ability.name}
+                            image={secondOrigin.image}
+                            ability={secondOrigin.ability && secondOrigin.ability}
+                            name={secondOrigin.name}
+                            description={secondOrigin.description}
                             navigation={props.navigation}
                         />
+                    }
+                    <Synergy
+                        image={firstClass.image}
+                        ability={firstClass.ability && firstClass.ability}
+                        name={firstClass.name}
+                        description={firstClass.description}
+                        navigation={props.navigation}
+                    />
+                    {secondClass &&
                         <Synergy
-                            image={firstOrigin.image}
-                            ability={firstOrigin.ability && firstOrigin.ability}
-                            name={firstOrigin.name}
-                            description={firstOrigin.description}
+                            image={secondClass.image}
+                            ability={secondClass.ability && secondClass.ability}
+                            name={secondClass.name}
+                            description={secondClass.description}
                             navigation={props.navigation}
                         />
-                        {secondOrigin &&
-                            <Synergy
-                                image={secondOrigin.image}
-                                ability={secondOrigin.ability && secondOrigin.ability}
-                                name={secondOrigin.name}
-                                description={secondOrigin.description}
-                                navigation={props.navigation}
-                            />
-                        }
-                        <Synergy
-                            image={firstClass.image}
-                            ability={firstClass.ability && firstClass.ability}
-                            name={firstClass.name}
-                            description={firstClass.description}
-                            navigation={props.navigation}
-                        />
-                        {secondClass &&
-                            <Synergy
-                                image={secondClass.image}
-                                ability={secondClass.ability && secondClass.ability}
-                                name={secondClass.name}
-                                description={secondClass.description}
-                                navigation={props.navigation}
-                            />
-                        }
-                    </View>
+                    }
                 </View>
             </ScrollView>
             <Footer navigation={props.navigation} />
@@ -125,7 +123,7 @@ const ChampionInfo = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
     },
     headerContainer: {
         height: "auto",
@@ -136,29 +134,6 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         borderBottomColor: '#505050',
         borderBottomWidth: 1,
-    },
-    synergy: {
-        width: 64,
-        height: 64,
-    },
-    synergiesContainer: {
-        flex: 1,
-    },
-    synergyContainer: {
-        flexDirection: "row",
-        paddingVertical: 15,
-        marginHorizontal: 20,
-        borderBottomColor: '#505050',
-        borderBottomWidth: 1,
-    },
-    synergyDescriptionContainer: {
-        flex: 1,
-        flexDirection: "column",
-        paddingHorizontal: 10,
-    },
-    synergyAbilityContainer: {
-        flexDirection: "row",
-        marginVertical: 5,
     },
     text: {
         color: "#CCC",

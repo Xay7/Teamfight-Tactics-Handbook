@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, ActivityIndicator, View, Text, ScrollView, Image, TouchableOpacity, Linking, Dimensions } from 'react-native';
+import { StyleSheet, ActivityIndicator, View, Text, ScrollView, Image, TouchableOpacity, Linking } from 'react-native';
 import Footer from '../components/Footer';
 import Background from '../components/Background';
 import * as rssParser from 'react-native-rss-parser';
 import HTMLParser from 'fast-html-parser';
 import entitiesDecoder from 'html-entities-decoder';
-
-const { width, height } = Dimensions.get('screen');
+import { champions } from '../assets/index';
+import Loader from '../components/Loader';
 
 const Homepage = (props) => {
 
     const [news, setNews] = useState([]);
     const [loading, setLoading] = useState(false);
-
-    const { navigate } = props.navigation;
-
 
     useEffect(() => {
         fetchRSS()
@@ -29,6 +26,7 @@ const Homepage = (props) => {
                 const filtered = rss.items.filter((el) => {
                     if (el.description.includes("Teamfight Tactics") || el.title.includes("Teamfight Tactics")) {
                         const parseHTML = HTMLParser.parse(el.description);
+                        el.date = el.published.slice(5, 16)
                         el.description = entitiesDecoder(parseHTML.childNodes[0].childNodes[0].rawText);
                         el.image = "https://euw.leagueoflegends.com" + parseHTML.childNodes[1].childNodes[0].childNodes[1].rawAttrs.split(' ')[1].substring(4).slice(1, -1).slice(0, -14)
                         return true;
@@ -43,7 +41,7 @@ const Homepage = (props) => {
     let displayNews = null;
 
     if (loading) {
-        displayNews = <ActivityIndicator size={72} color="#eeeeee" />
+        displayNews = <Loader />
     } else {
         displayNews = news.map(el => {
             return <View style={{ flex: 1, }} key={el.published}>
@@ -53,6 +51,7 @@ const Homepage = (props) => {
                     </TouchableOpacity>
                     <Text style={styles.newsTitle}>{el.title}</Text>
                     <Text style={styles.newsDescription}>{el.description}</Text>
+                    <Text style={styles.date}>{el.date}</Text>
                 </View>
             </View>
         })
@@ -92,10 +91,9 @@ const styles = StyleSheet.create({
         marginVertical: 10
     },
     newsDescription: {
-        color: "white",
+        color: "#DDD",
         paddingHorizontal: 25,
         paddingTop: 5,
-        paddingBottom: 20,
         alignSelf: "flex-start"
     },
     newsContainer: {
@@ -105,6 +103,13 @@ const styles = StyleSheet.create({
         flexShrink: 1,
         borderBottomWidth: 1,
         borderBottomColor: "#505050"
+    },
+    date: {
+        color: "#BBB",
+        paddingHorizontal: 25,
+        paddingTop: 5,
+        paddingBottom: 20,
+        alignSelf: "flex-start"
     }
 });
 
