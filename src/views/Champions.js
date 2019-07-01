@@ -1,63 +1,62 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Image, ScrollView, TouchableOpacity, TextInput, Text, Dimensions, Picker } from 'react-native';
+import { StyleSheet, View, Image, ScrollView, TouchableOpacity, Text, Dimensions, FlatList } from 'react-native';
 import { champions, origin, classes } from '../assets/index';
-import Icon from 'react-native-vector-icons/AntDesign';
 import Footer from '../components/Footer';
 import Background from '../components/Background';
 import Input from '../components/Input';
+import Loader from '../components/Loader';
+
+const { width, height } = Dimensions.get('screen');
 
 const Champions = (props) => {
 
-    const [allChampions, setAllChampions] = useState(champions)
-
-    const { width, height } = Dimensions.get('screen');
-
+    const [allChampions, setAllChampions] = useState([]);
     const [inputValue, useInputValue] = useState('');
+    const [loading, setLoading] = useState(true);
 
     const { navigate } = props.navigation;
 
-    let championsList = Object.keys(allChampions).map((key, i) => {
+    useEffect(() => {
+        const data = allChampions ? Object.values(champions) : []
+        setAllChampions(data);
+        setLoading(false);
+    }, [])
+
+    useEffect(() => {
+        let filteredChampions = null;
         if (inputValue.length > 0) {
-            if (allChampions[key].name.toLowerCase().includes(inputValue.toLowerCase())) {
-                return <TouchableOpacity
-                    key={allChampions[key].name}
-                    onPress={() => navigate('ChampionInfo', {
-                        name: allChampions[key].name
-                    })}>
-                    <View style={styles.allChampionsWrapper}>
-                        <Image source={allChampions[key].image} style={styles.champion} />
-                        <Text style={{ color: "white", fontSize: 20, fontWeight: "bold", marginHorizontal: 10 }}>{allChampions[key].name}</Text>
-                        <Image source={origin[allChampions[key].origin].image} style={styles.synergy} />
-                        {allChampions[key].originSecond && <Image source={origin[allChampions[key].originSecond].image} style={styles.synergy} ></Image>}
-                        <Image source={classes[allChampions[key].class].image} style={styles.synergy} />
-                        {allChampions[key].classSecond && <Image source={classes[allChampions[key].classSecond].image} style={styles.synergy} ></Image>}
-                    </View>
-                </TouchableOpacity>
-            } else return null;
+            filteredChampions = allChampions.filter(el => {
+                console.log(el.name);
+                console.log(inputValue);
+                return el.name.toLowerCase().includes(inputValue.toLowerCase());
+            })
         } else {
-            return <TouchableOpacity
-                key={allChampions[key].name}
-                onPress={() => navigate('ChampionInfo', {
-                    name: allChampions[key].name
-                })}>
-                <View style={styles.allChampionsWrapper}>
-                    <Image source={allChampions[key].image} style={styles.champion} />
-                    <Text style={{ color: "white", fontSize: 20, fontWeight: "bold", marginHorizontal: 10 }}>{allChampions[key].name}</Text>
-                    <Image source={origin[allChampions[key].origin].image} style={styles.synergy} />
-                    {allChampions[key].originSecond && <Image source={origin[allChampions[key].originSecond].image} style={styles.synergy} ></Image>}
-                    <Image source={classes[allChampions[key].class].image} style={styles.synergy} />
-                    {allChampions[key].classSecond && <Image source={classes[allChampions[key].classSecond].image} style={styles.synergy} ></Image>}
-                </View>
-            </TouchableOpacity>
+            filteredChampions = allChampions ? Object.values(champions) : []
         }
-    })
+        setAllChampions(filteredChampions);
+    }, [inputValue])
+
 
     return (
         <View style={{ flex: 1, height: height, width: width }}>
             <Background />
             <ScrollView>
                 <Input onChange={useInputValue} placeholder="Find champions" />
-                {championsList}
+                {loading && <Loader />}
+                <FlatList data={allChampions} renderItem={({ item }) => <TouchableOpacity
+                    key={item.name}
+                    onPress={() => navigate('ChampionInfo', {
+                        name: item.name
+                    })}>
+                    <View style={styles.allChampionsWrapper}>
+                        <Image source={item.image} style={styles.champion} />
+                        <Text style={{ color: "white", fontSize: 20, fontWeight: "bold", marginHorizontal: 10 }}>{item.name}</Text>
+                        <Image source={origin[item.origin].image} style={styles.synergy} />
+                        {item.originSecond && <Image source={origin[item.originSecond].image} style={styles.synergy} ></Image>}
+                        <Image source={classes[item.class].image} style={styles.synergy} />
+                        {item.classSecond && <Image source={classes[item.classSecond].image} style={styles.synergy} ></Image>}
+                    </View>
+                </TouchableOpacity>} />
             </ScrollView>
             <Footer navigation={props.navigation} />
         </View>
@@ -73,34 +72,14 @@ const styles = StyleSheet.create({
     champion: {
         height: 64,
         width: 64,
-        margin: 5
     },
     allChampionsWrapper: {
         flex: 1,
         flexDirection: "row",
         justifyContent: "flex-start",
         alignItems: "center",
-        marginHorizontal: 25,
+        marginHorizontal: 15,
         marginBottom: 5
-    },
-    search: {
-        flex: 0.7,
-        height: 51,
-        backgroundColor: "white",
-        borderColor: "#EEE",
-        paddingRight: 30,
-        textAlign: "center",
-        fontSize: 25,
-        color: "black",
-        borderBottomRightRadius: 5,
-        borderTopRightRadius: 5
-    },
-    searchContainer: {
-        flex: 1,
-        justifyContent: "center",
-        flexDirection: "row",
-        marginVertical: 30,
-        borderColor: '#000',
     },
     synergy: {
         width: 24,
