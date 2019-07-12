@@ -244,7 +244,7 @@ export const champions = {
     Draven: {
         image: require('./Champions/Draven.png'),
         origin: "Imperial",
-        class: "Assassin",
+        class: "Blademaster",
         ability: {
             image: require('./Abilities/Draven.png'),
             name: "Spinning Axes",
@@ -686,8 +686,8 @@ export const champions = {
     },
     Mordekaiser: {
         image: require('./Champions/Mordekaiser.png'),
-        origin: "Demon",
-        class: "Sorcerer",
+        origin: "Phantom",
+        class: "Knight",
         ability: {
             image: require('./Abilities/Mordekaiser.png'),
             name: "Obliterate",
@@ -818,8 +818,8 @@ export const champions = {
     },
     Rengar: {
         image: require('./Champions/Rengar.png'),
-        origin: "Void",
-        class: "Brawler",
+        origin: "Wild",
+        class: "Assassin",
         ability: {
             image: require('./Abilities/Rengar.png'),
             name: "Savagery",
@@ -1225,17 +1225,13 @@ export const origin = {
         description: "Wildlings generate Fury on-hit, up to 5. Each stack gives 7% attack speed.",
         ability: {
             1: {
-                amount: 1,
-                effect: "Fury benefits all allied Wildlings."
-            },
-            2: {
                 amount: 2,
                 effect: "Fury benefits all allied Wildlings."
             },
-            3: {
-                amount: 3,
-                effect: "Fury benefits all allies."
-            }
+            2: {
+                amount: 4,
+                effect: "All allies"
+            },
         }
     },
     Yordle: {
@@ -1263,11 +1259,11 @@ export const classes = {
         ability: {
             1: {
                 amount: 3,
-                effect: "150%"
+                effect: "150% critical damage"
             },
             2: {
                 amount: 6,
-                effect: "350%"
+                effect: "350% critical damage"
             }
         }
     },
@@ -1340,8 +1336,8 @@ export const classes = {
                 effect: "40"
             },
             3: {
-                amount: 4,
-                effect: "60"
+                amount: 6,
+                effect: "80"
             }
         }
     },
