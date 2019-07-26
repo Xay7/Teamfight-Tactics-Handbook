@@ -19,6 +19,7 @@ export const champions = {
             armor: "25"
         },
         tier: 3,
+        build: ["Hextech Gunblade", "Dragon's Claw", "Phantom Dancer"],
         name: "Aatrox",
     },
     Ahri: {
@@ -41,6 +42,7 @@ export const champions = {
             armor: "20"
         },
         tier: 2,
+        build: ["Spear of Shojin", "Guinsoo's Rageblade", "Rabadon's Deathcap"],
         name: "Ahri"
     },
     Akali: {
@@ -63,6 +65,7 @@ export const champions = {
             armor: "20"
         },
         tier: 4,
+        build: ["Seraph's Embrace", "Phantom Dancer", "Rabadon's Deathcap"],
         name: "Akali"
     },
     Anivia: {
@@ -85,6 +88,7 @@ export const champions = {
             armor: "20"
         },
         tier: 5,
+        build: ["Seraph's Embrace", "Seraph's Embrace", "Morellonomicon"],
         name: "Anivia"
     },
     Ashe: {
@@ -107,6 +111,7 @@ export const champions = {
             armor: "20"
         },
         tier: 3,
+        build: ["Spear of Shojin", "Spear of Shojin", "Rapid Firecannon"],
         name: "Ashe"
     },
     "Aurelion Sol": {
@@ -129,6 +134,7 @@ export const champions = {
             armor: "20"
         },
         tier: 4,
+        build: ["Spear of Shojin", "Guinsoo's Rageblade", "Rabadon's Deathcap"],
         name: "Aurelion Sol"
     },
     Blitzcrank: {
@@ -151,6 +157,7 @@ export const champions = {
             armor: "35"
         },
         tier: 2,
+        build: ["Spear of Shojin", "Guinsoo's Rageblade", "Rabadon's Deathcap"],
         name: "Blitzcrank"
     },
     Brand: {
@@ -173,6 +180,7 @@ export const champions = {
             armor: "25"
         },
         tier: 4,
+        build: ["Spear of Shojin", "Guinsoo's Rageblade", "Rabadon's Deathcap"],
         name: "Brand"
     },
     Braum: {
@@ -195,6 +203,7 @@ export const champions = {
             armor: "25"
         },
         tier: 2,
+        build: ["Thornmail", "Locket of the Iron Solari", "Zeke's Herald"],
         name: "Braum"
     },
     "Cho'gath": {
@@ -217,6 +226,7 @@ export const champions = {
             armor: "20"
         },
         tier: 4,
+        build: ["Frozen Heart", "Dragon's Claw", "Phantom Dancer"],
         name: "Cho'gath"
     },
     Darius: {
@@ -239,6 +249,7 @@ export const champions = {
             armor: "25"
         },
         tier: 1,
+        build: ["Frozen Heart", "Dragon's Claw", "Phantom Dancer"],
         name: "Darius"
     },
     Draven: {
@@ -261,6 +272,7 @@ export const champions = {
             armor: "25"
         },
         tier: 4,
+        build: ["Bloodthirster", "Phantom Dancer", "Rapid Firecannon"],
         name: "Draven"
     },
     Elise: {
@@ -283,6 +295,7 @@ export const champions = {
             armor: "20"
         },
         tier: 1,
+        build: ["Red Buff", "Dragon's Claw", "Phantom Dancer"],
         name: "Elise"
     },
     Evelynn: {
@@ -305,6 +318,7 @@ export const champions = {
             armor: "20"
         },
         tier: 3,
+        build: ["Spear of Shojin", "Guinsoo's Rageblade", "Rabadon's Deathcap"],
         name: "Evelynn"
     },
     Fiora: {
@@ -327,6 +341,7 @@ export const champions = {
             armor: "25"
         },
         tier: 1,
+        build: ["Spear of Shojin", "Dragon's Claw", "Phantom Dancer"],
         name: "Fiora"
     },
     Gangplank: {
@@ -350,6 +365,7 @@ export const champions = {
             armor: "20"
         },
         tier: 3,
+        build: ["Spear of Shojin", "Dragon's Claw", "Phantom Dancer"],
         name: "Gangplank"
     },
     Garen: {
@@ -372,6 +388,7 @@ export const champions = {
             armor: "35"
         },
         tier: 1,
+        build: ["Morellonomicon", "Frozen Heart", "Phantom Dancer"],
         name: "Garen"
     },
     Gnar: {
@@ -395,6 +412,7 @@ export const champions = {
             armor: "30"
         },
         tier: 4,
+        build: ["Titanic Hydra", "Dragon's Claw", "Phantom Dancer"],
         name: "Gnar"
     },
     Graves: {
@@ -417,6 +435,7 @@ export const champions = {
             armor: "20"
         },
         tier: 1,
+        build: ["Red Buff", "Sword Breaker", "Cursed Blade"],
         name: "Graves"
     },
     Karthus: {
@@ -439,6 +458,7 @@ export const champions = {
             armor: "25"
         },
         tier: 5,
+        build: ["Seraph's Embrace", "Seraph's Embrace", "Rabadon's Deathcap"],
         name: "Karthus"
     },
     Kassadin: {
@@ -461,6 +481,7 @@ export const champions = {
             armor: "25"
         },
         tier: 1,
+        build: ["Phantom Dancer", "Dragon's Claw", "Guinsoo's Rageblade"],
         name: "Kassadin"
     },
     Katarina: {
@@ -483,6 +504,7 @@ export const champions = {
             armor: "20"
         },
         tier: 3,
+        build: ["Morellonomicon", "Seraph's Embrace", "Seraph's Embrace"],
         name: "Katarina"
     },
     Kayle: {
@@ -505,6 +527,7 @@ export const champions = {
             armor: "35"
         },
         tier: 5,
+        build: ["Spear of Shojin", "Spear of Shojin", "Guinsoo's Rageblade"],
         name: "Kayle"
     },
     Kennen: {
@@ -528,9 +551,10 @@ export const champions = {
             armor: "20"
         },
         tier: 3,
+        build: ["Morellonomicon", "Phantom Dancer", "Dragon's Claw"],
         name: "Kennen"
     },
-    Khazix: {
+    "Kha'zix": {
         image: require('./Champions/Khazix.png'),
         origin: "Void",
         class: "Assassin",
@@ -550,6 +574,7 @@ export const champions = {
             armor: "20"
         },
         tier: 1,
+        build: ["Infinity Edge", "Phantom Dancer", "Rapid Firecannon"],
         name: "Kha'zix"
     },
     Kindred: {
@@ -572,6 +597,7 @@ export const champions = {
             armor: "20"
         },
         tier: 4,
+        build: ["Zephyr", "Locket of the Iron Solari", "Zeke's Herald"],
         name: "Kindred"
     },
     Leona: {
@@ -594,6 +620,7 @@ export const champions = {
             armor: "55"
         },
         tier: 4,
+        build: ["Frozen Heart", "Locket of the Iron Solari", "Zeke's Herald"],
         name: "Leona"
     },
     Lissandra: {
@@ -616,6 +643,7 @@ export const champions = {
             armor: "20"
         },
         tier: 2,
+        build: ["Zephyr", "Locket of the Iron Solari", "Zeke's Herald"],
         name: "Lissandra"
     },
     Lucian: {
@@ -638,6 +666,7 @@ export const champions = {
             armor: "25"
         },
         tier: 2,
+        build: ["Seraph's Embrace", "Cursed Blade", "Red Buff"],
         name: "Lucian"
     },
     Lulu: {
@@ -660,6 +689,7 @@ export const champions = {
             armor: "25"
         },
         tier: 2,
+        build: ["Spear of Shojin", "Spear of Shojin", "Guinsoo's Rageblade"],
         name: "Lulu"
     },
     "Miss Fortune": {
@@ -682,6 +712,7 @@ export const champions = {
             armor: "20"
         },
         tier: 5,
+        build: ["Seraph's Embrace", "Seraph's Embrace", "Morellonomicon"],
         name: "Miss Fortune"
     },
     Mordekaiser: {
@@ -704,6 +735,7 @@ export const champions = {
             armor: "35"
         },
         tier: 1,
+        build: ["Frozen Heart", "Dragon's Claw", "Phantom Dancer"],
         name: "Mordekaiser"
     },
     Morgana: {
@@ -726,6 +758,7 @@ export const champions = {
             armor: "20"
         },
         tier: 3,
+        build: ["Morellonomicon", "Dragon's Claw", "Phantom Dancer"],
         name: "Morgana"
     },
     Nidalee: {
@@ -748,6 +781,7 @@ export const champions = {
             armor: "20"
         },
         tier: 1,
+        build: ["Guinsoo's Rageblade", "Dragon's Claw", "Phantom Dancer"],
         name: "Nidalee"
     },
     Poppy: {
@@ -770,6 +804,7 @@ export const champions = {
             armor: "40"
         },
         tier: 3,
+        build: ["Thornmail", "Dragon's Claw", "Phantom Dancer"],
         name: "Poppy"
     },
     Pyke: {
@@ -792,6 +827,7 @@ export const champions = {
             armor: "25"
         },
         tier: 2,
+        build: ["Spear of Shojin", "Spear of Shojin", "Guinsoo's Rageblade"],
         name: "Pyke"
     },
     "Rek'sai": {
@@ -814,6 +850,7 @@ export const champions = {
             armor: "20"
         },
         tier: 2,
+        build: ["Frozen Heart", "Warmog's Armor", "Titanic Hydra"],
         name: "Rek'sai"
     },
     Rengar: {
@@ -836,6 +873,7 @@ export const champions = {
             armor: "20"
         },
         tier: 3,
+        build: ["Infinity Edge", "Rapid Firecannon", "Phantom Dancer"],
         name: "Rengar"
     },
     Sejuani: {
@@ -858,6 +896,7 @@ export const champions = {
             armor: "35"
         },
         tier: 4,
+        build: ["Spear of Shojin", "Dragon's Claw", "Phantom Dancer"],
         name: "Sejuani"
     },
     Shen: {
@@ -880,6 +919,7 @@ export const champions = {
             armor: "30"
         },
         tier: 2,
+        build: ["Thornmail", "Dragon's Claw", "Phantom Dancer"],
         name: "Shen"
     },
     Shyvana: {
@@ -902,6 +942,7 @@ export const champions = {
             armor: "20"
         },
         tier: 3,
+        build: ["Titanic Hydra", "Warmog's Armor", "Phantom Dancer"],
         name: "Shyvana"
     },
     Swain: {
@@ -925,6 +966,7 @@ export const champions = {
             armor: "25"
         },
         tier: 5,
+        build: ["Morellonomicon", "Dragon's Claw", "Phantom Dancer"],
         name: "Swain"
     },
     Tristana: {
@@ -947,6 +989,7 @@ export const champions = {
             armor: "20"
         },
         tier: 1,
+        build: ["Red Buff", "Rapid Firecannon", "Cursed Blade"],
         name: "Tristana"
     },
     "Twisted Fate": {
@@ -969,6 +1012,7 @@ export const champions = {
             armor: "20"
         },
         tier: 2,
+        build: ["Spear of Shojin", "Spear of Shojin", "Guinsoo's Rageblade"],
         name: "Twisted Fate"
     },
     Varus: {
@@ -991,6 +1035,7 @@ export const champions = {
             armor: "25"
         },
         tier: 2,
+        build: ["Rabadon's Deathcap", "Spear of Shojin", "Guinsoo's Rageblade"],
         name: "Varus"
     },
     Vayne: {
@@ -1013,6 +1058,7 @@ export const champions = {
             armor: "25"
         },
         tier: 1,
+        build: ["Rapid Firecannon", "Guinsoo's Rageblade", "Guinsoo's Rageblade"],
         name: "Vayne"
     },
     Veigar: {
@@ -1035,6 +1081,7 @@ export const champions = {
             armor: "20"
         },
         tier: 3,
+        build: ["Spear of Shojin", "Spear of Shojin", "Seraph's Embrace"],
         name: "Veigar"
     },
     Volibear: {
@@ -1057,6 +1104,7 @@ export const champions = {
             armor: "30"
         },
         tier: 3,
+        build: ["Rapid Firecannon", "Phantom Dancer", "Cursed Blade"],
         name: "Volibear"
     },
     Warwick: {
@@ -1079,6 +1127,7 @@ export const champions = {
             armor: "30"
         },
         tier: 1,
+        build: ["Frozen Heart", "Warmog's Armor", "Titanic Hydra"],
         name: "Warwick"
     },
     Yasuo: {
@@ -1101,6 +1150,7 @@ export const champions = {
             armor: "35"
         },
         tier: 5,
+        build: ["Seraph's Embrace", "Dragon's Claw", "Phantom Dancer"],
         name: "Yasuo"
     },
     Zed: {
@@ -1123,6 +1173,7 @@ export const champions = {
             armor: "25"
         },
         tier: 2,
+        build: ["Infinity Edge", "Rapid Firecannon", "Phantom Dancer"],
         name: "Zed"
     },
 }
