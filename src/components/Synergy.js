@@ -41,19 +41,18 @@ const ChampionAbility = (props) => {
 
                 </View>
                 <View>
-
                 </View>
             </View>
             <View style={styles.championsContainer}>
                 {championList.map(el => {
-                    if (props.name === champions[el].origin) {
+                    if (props.name === champions[el].origin || props.name === champions[el].originSecond) {
                         return <TouchableOpacity onPress={() => props.navigation.navigate('ChampionInfo', {
                             name: el
                         })} key={el} style={{ padding: 5 }}>
                             <Image source={champions[el].image} style={{ height: 48, width: 48 }} />
                         </TouchableOpacity>
                     }
-                    if (props.name === champions[el].class) {
+                    if (props.name === champions[el].class || props.name === champions[el].originSecond) {
                         return <TouchableOpacity onPress={() => props.navigation.navigate('ChampionInfo', {
                             name: el
                         })} key={el} style={{ padding: 5 }}>

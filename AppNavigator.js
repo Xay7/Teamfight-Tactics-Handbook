@@ -18,7 +18,7 @@ const AppNavigator = createStackNavigator({
     Synergies: Synergies
 },
     {
-        initialRouteName: 'Synergies',
+        initialRouteName: 'Home',
         headerMode: 'none',
         navigationOptions: {
             headerVisible: false,
