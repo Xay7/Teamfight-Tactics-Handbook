@@ -11,11 +11,12 @@ import Armor from "../assets/UI/armor.png";
 import Footer from "../components/Footer";
 import Synergy from "../components/Synergy";
 import Background from "../components/Background";
+import { items } from "../assets/index";
 
 const ChampionInfo = props => {
   const name = props.navigation.getParam("name", "Oops, something went wrong");
 
-  const champion = require("../assets/index").champions["Aatrox"];
+  const champion = require("../assets/index").champions[name];
   const firstOrigin = require("../assets/index").origin[champion.origin];
   const secondOrigin = require("../assets/index").origin[champion.originSecond];
   const firstClass = require("../assets/index").classes[champion.class];
@@ -56,11 +57,25 @@ const ChampionInfo = props => {
                 source={champion.image}
                 style={{ height: 100, width: 100 }}
               />
-              <View style={styles.statsWrapper}>
-                <Image source={Cost} style={{ height: 24, width: 24 }} />
-                <Text style={{ color: "#FFD700", fontSize: 20, marginLeft: 5 }}>
-                  {champion.stats.cost}$
-                </Text>
+              <View
+                style={{
+                  flexDirection: "row",
+                  marginTop: 5,
+                  alignItems: "center"
+                }}
+              >
+                <Image
+                  source={items[champion.build[0]].image}
+                  style={styles.item}
+                />
+                <Image
+                  source={items[champion.build[1]].image}
+                  style={styles.item}
+                />
+                <Image
+                  source={items[champion.build[2]].image}
+                  style={styles.item}
+                />
               </View>
             </View>
             <View
@@ -71,6 +86,14 @@ const ChampionInfo = props => {
               }}
             >
               <View>
+                <View style={styles.statsWrapper}>
+                  <Image source={Cost} style={{ height: 24, width: 24 }} />
+                  <Text
+                    style={{ color: "#FFD700", fontSize: 20, marginLeft: 5 }}
+                  >
+                    {champion.stats.cost} coins
+                  </Text>
+                </View>
                 <View style={styles.statsWrapper}>
                   <Image source={Health} />
                   <Text style={styles.statsText}>{champion.stats.health}</Text>
@@ -83,14 +106,14 @@ const ChampionInfo = props => {
                   <Image source={Damage} />
                   <Text style={styles.statsText}>{champion.stats.damage}</Text>
                 </View>
+              </View>
+              <View style={{ marginLeft: 10 }}>
                 <View style={styles.statsWrapper}>
                   <Image source={AttackSpeed} />
                   <Text style={styles.statsText}>
                     {champion.stats.attackSpeed}
                   </Text>
                 </View>
-              </View>
-              <View style={{ marginLeft: 10 }}>
                 <View style={styles.statsWrapper}>
                   <Image source={AttackRange} />
                   <Text style={styles.statsText}>
@@ -110,6 +133,14 @@ const ChampionInfo = props => {
               </View>
             </View>
           </View>
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+          />
           <Synergy
             image={champion.ability.image}
             description={champion.ability.description}
@@ -187,6 +218,10 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: "#CCC",
     paddingLeft: 5
+  },
+  item: {
+    height: 28,
+    width: 28
   }
 });
 
