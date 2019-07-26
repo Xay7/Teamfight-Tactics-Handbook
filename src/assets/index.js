@@ -1430,7 +1430,7 @@ export const items = {
     "Recurve Bow": {
         name: "Recurve Bow",
         image: require("../assets/Items/Recurve_Bow_item.png"),
-        as: 15,
+        as: 20,
         recipes: {
             "Sword of the Divine": "B.F Sword",
             "Rapid Firecannon": "Recurve Bow",
@@ -1445,7 +1445,7 @@ export const items = {
     "Needlessly Large Rod": {
         name: "Needlessly Large Rod",
         image: require("../assets/Items/Needlessly_Large_Rod_item.png"),
-        ap: 15,
+        ap: 20,
         recipes: {
             "Hextech Gunblade": "B.F Sword",
             "Guinsoo's Rageblade": "Recurve Bow",
@@ -1535,13 +1535,13 @@ export const items = {
         name: "Infinity Edge",
         image: require("../assets/Items/Infinity_Edge_item.png"),
         ad: 40,
-        passive: "100% critical strike damage"
+        passive: "Critical Strikes deal +150% damage."
     },
     "Sword of the Divine": {
         name: "Sword of the Divine",
         image: require("../assets/Items/Sword_of_the_Divine_item.png"),
         ad: 20,
-        as: 15,
+        as: 20,
         passive: "Every second, has a 5% chance to gain 100% critical strike chance until the end of combat."
     },
     "Spear of Shojin": {
@@ -1549,21 +1549,21 @@ export const items = {
         image: require("../assets/Items/Spear_of_Shojin_item.png"),
         ad: 20,
         mana: 20,
-        passive: "After casting Special Ability for the first time, gain: Basic attacks restore an additional 15% of maximum mana on-hit."
+        passive: "After casting, wearer gains 15% of its max mana per attack."
     },
     "Hextech Gunblade": {
         name: "Hextech Gunblade",
         image: require("../assets/Items/Hextech_Gunblade_item.png"),
         ad: 20,
         ap: 20,
-        passive: "Heal for 25% of damage dealt."
+        passive: "Heal for 25% of all damage dealt."
     },
     "Guardian Angel": {
         name: "Guardian Angel",
         image: require("../assets/Items/Guardian_Angel_item.png"),
         ad: 20,
         armor: 20,
-        passive: "Upon death, revive with 500 health."
+        passive: "Wearer revives with 1000 Health after a 2 sec delay."
     },
     "Bloodthirster": {
         name: "Bloodthirster",
@@ -1577,13 +1577,13 @@ export const items = {
         image: require("../assets/Items/Zeke's_Herald_item.png"),
         ad: 20,
         hp: 200,
-        passive: "At the beginning of combat, all adjacent allies gain 10% attack speed."
+        passive: "Allies two spaces to the left and right gain +15% Attack Speed."
     },
     "Youmuu's Ghostblade": {
         name: "Youmuu's Ghostblade",
         image: require("../assets/Items/Youmuu's_Ghostblade_item.png"),
         ad: 20,
-        passive: "Becomes an Assassin."
+        passive: "Wearer is also an Assassin."
     },
     "Rapid Firecannon": {
         name: "Rapid Firecannon",
@@ -1594,57 +1594,57 @@ export const items = {
     "Guinsoo's Rageblade": {
         name: "Guinsoo's Rageblade",
         image: require("../assets/Items/Guinsoo's_Rageblade_item.png"),
-        as: 15,
+        as: 20,
         ap: 20,
-        passive: "Gain 3% attack speed on-hit. Stacks with no upper limit."
+        passive: "Gain 4% attack speed on-hit. Stacks with no upper limit."
     },
     "Redemption": {
         name: "Redemption",
         image: require("../assets/Items/Redemption_item.png"),
         mana: 20,
         hp: 200,
-        passive: "On death, after a small delay, heal nearby allies for 1000 health."
+        passive: "Upon reaching 25% health, heal all nearby allies for 1000 Health."
     },
     "Red Buff": {
         name: "Red Buff",
         image: require("../assets/Items/Red_BramblebackSquare.png"),
         armor: 20,
         hp: 200,
-        passive: "Basic attacks apply Grievous Wounds."
+        passive: "Attacks deal 2.5% burn damage and apply grievous wounds (reduced healing)."
     },
     "Statikk Shiv": {
         name: "Statikk Shiv",
         image: require("../assets/Items/Statikk_Shiv_item.png"),
         mana: 20,
-        as: 15,
-        passive: "Every third attack deals 100 magic damage to the target and all adjacent enemies."
+        as: 20,
+        passive: "Every 3rd attack deals 100 splash magical damage to 3 additional targets."
     },
     "Phantom Dancer": {
         name: "Phantom Dancer",
         image: require("../assets/Items/Phantom_Dancer_item.png"),
         armor: 20,
-        as: 15,
-        passive: "Dodge all critical strikes."
+        as: 20,
+        passive: "Wearer dodges all Critical Strikes."
     },
     "Cursed Blade": {
         name: "Cursed Blade",
         image: require("../assets/Items/Dervish_Blade_item.png"),
         mr: 20,
-        as: 15,
-        passive: "Basic attacks have a chance to Subjugate shrink the target, removing 1 Star."
+        as: 20,
+        passive: "Attacks have a 20% chance to Shrink (Reduce enemy's star level by 1)."
     },
     "Titanic Hydra": {
         name: "Titanic Hydra",
         image: require("../assets/Items/Titanic_Hydra_item.png"),
         hp: 200,
-        as: 15,
+        as: 20,
         passive: "Basic attacks deal 10% of your maximum health bonus damage to the target and all adjacent enemies."
     },
     "Blade of the Ruined King": {
         name: "Blade of the Ruined King",
         image: require("../assets/Items/Blade_of_the_Ruined_King_item.png"),
-        as: 15,
-        passive: "Becomes a Blademaster."
+        as: 40,
+        passive: "Wearer is also a Blademaster."
     },
     "Rabadon's Deathcap": {
         name: "Rabadon's Deathcap",
@@ -1664,27 +1664,27 @@ export const items = {
         image: require("../assets/Items/Locket_of_the_Iron_Solari_item.png"),
         ap: 20,
         armor: 20,
-        passive: "At the beginning of combat, all adjacent allies gain a 200 health shield."
+        passive: "On start of combat, allies two spaces to the left and right gain a shield of 200."
     },
     "Ionic Spark": {
         name: "Ionic Spark",
         image: require("../assets/Items/Ionic_Spark_item.png"),
         ap: 20,
         mr: 20,
-        passive: "Enemies take 200 magic damage whenever they cast their Special Ability."
+        passive: "Whenever an enemy casts a spell, they take 200 true damage"
     },
     "Morellonomicon": {
         name: "Morellonomicon",
         image: require("../assets/Items/Morellonomicon_item.png"),
         ap: 20,
         health: 200,
-        passive: "Spells deal burn damage equal to 10% of the enemy's maximum health per second."
+        passive: "Spells deal burn damage equal to 5% of the enemy's max HP per second. Lasts for 5 seconds and burned units cannot heal."
     },
     "Yuumi": {
         name: "Yuumi",
         image: require("../assets/Items/You_and_Me!.png"),
         ap: 20,
-        passive: "Becomes a Sorcerer."
+        passive: "Wearer is also a Sorcerer."
     },
     "Seraph's Embrace": {
         name: "Seraph's Embrace",
@@ -1703,14 +1703,14 @@ export const items = {
         name: "Thornmail",
         image: require("../assets/Items/Thornmail_item.png"),
         armor: 40,
-        passive: "Reflect 30% of damage taken from basic attacks."
+        passive: "Reflect 100% of mitigated damage taken from attacks as true damage."
     },
     "Sword Breaker": {
         name: "Sword Breaker",
         image: require("../assets/Items/Sword_Breaker_item.png"),
         armor: 20,
         mr: 20,
-        passive: "Basic attacks have a chance to disarm the target."
+        passive: "Attacks have a 25% chance to disarm."
     },
     "Dragon's Claw": {
         name: "Dragon's Claw",
@@ -1729,38 +1729,38 @@ export const items = {
         name: "Warmog's Armor",
         image: require("../assets/Items/Warmog's_Armor_item.png"),
         health: 400,
-        passive: "Regenerates 3% of maximum health per second."
+        passive: "Regenerates 6% of maximum health per second."
     },
     "Frozen Mallet": {
         name: "Frozen Mallet",
         image: require("../assets/Items/Frozen_Mallet_item.png"),
-        health: 200,
-        passive: "Becomes a Glacial."
+        health: 400,
+        passive: "Wearer is also a Glacial."
     },
     "Hush": {
         name: "Hush",
         image: require("../assets/Items/Hush_item.png"),
         mana: 20,
         mr: 20,
-        passive: "Basic attacks have a high chance to silence the target."
+        passive: "Attacks have a 50% chance to Silence."
     },
     "Darkin": {
         name: "Darkin",
         image: require("../assets/Items/World_Ender.png"),
-        mana: 20,
-        passive: "Becomes a Demon."
+        mana: 40,
+        passive: "Wearer is also a Demon."
     },
     "Knight's Vow": {
         name: "Knight's Vow",
         image: require("../assets/Items/Knight's_Vow_item.png"),
         armor: 20,
-        passive: "Becomes a Knight."
+        passive: "Wearer is also a Knight."
     },
     "Runaan's Hurricane": {
         name: "Runaan's Hurricane",
         image: require("../assets/Items/Runaan's_Hurricane_item.png"),
-        mr: 20,
-        passive: "Basic attacks hit 2 additional targets for 50% damage."
+        mr: 40,
+        passive: "Attacks 1 extra targets on attack. Extra attacks deal 25% damage. Applies on-hit effects."
     },
     "Force of Nature": {
         name: "Force of Nature",
