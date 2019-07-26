@@ -949,6 +949,28 @@ export const champions = {
         tier: 1,
         name: "Tristana"
     },
+    "Twisted Fate": {
+        image: require('./Champions/Twisted_Fate.png'),
+        origin: "Pirate",
+        class: "Sorcerer",
+        ability: {
+            image: require('./Abilities/Twisted_Fate.png'),
+            name: "Pick a Card",
+            description: "Twisted Fate throws a card that either stuns for 2, 3 ,4 seconds, deals damage around his target for 200 / 300 / 400, or restores 20 / 35 / 50 mana to himself and nearby allies."
+        },
+        stats: {
+            cost: 2,
+            health: "450 / 810 / 1620",
+            mana: "50",
+            damage: "40 / 72 / 144",
+            attackSpeed: "0.75",
+            attackRange: "3 range",
+            magicResist: "20",
+            armor: "20"
+        },
+        tier: 2,
+        name: "Twisted Fate"
+    },
     Varus: {
         image: require('./Champions/Varus.png'),
         origin: "Demon",
