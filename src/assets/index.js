@@ -6,11 +6,11 @@ export const champions = {
         ability: {
             image: require('./Abilities/Aatrox.png'),
             name: "The Darkin Blade",
-            description: "Deals 400 / 700 / 1000 magic damage to all enemies in a circle."
+            description: "Deals 250 / 600 / 950 magic damage to all enemies in a circle."
         },
         stats: {
             cost: 3,
-            health: "750 / 1350 / 2700",
+            health: "700 / 1260 / 2520",
             mana: "75",
             damage: "65 / 117 / 234",
             attackSpeed: "0.65",
@@ -52,7 +52,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Akali.png'),
             name: "Five Point Strike",
-            description: "Deals 200 / 375 / 550 magic damage to all enemies in a cone."
+            description: "Deals 150 / 275 / 400 magic damage to all enemies in a cone."
         },
         stats: {
             cost: 4,
@@ -104,7 +104,7 @@ export const champions = {
             cost: 3,
             health: "550 / 990 / 1980",
             mana: "100",
-            damage: "60 / 108 / 216",
+            damage: "65 / 117 / 234",
             attackSpeed: "0.7",
             attackRange: "4 range",
             magicResist: "20",
@@ -149,7 +149,7 @@ export const champions = {
         stats: {
             cost: 2,
             health: "600 / 1080 / 2160",
-            mana: "150",
+            mana: "145",
             damage: "50 / 90 / 180",
             attackSpeed: "0.5",
             attackRange: "1 range",
@@ -167,7 +167,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Brand.png'),
             name: "Pyroclasm",
-            description: "Unleashes a fireball that bounces 4 / 6 / 20 times between enemies, dealing 200 / 300 / 400 magic damage with each bounce."
+            description: "Unleashes a fireball that bounces 4 / 6 / 20 times between enemies, dealing 200 / 375 / 550 magic damage with each bounce."
         },
         stats: {
             cost: 4,
@@ -200,7 +200,7 @@ export const champions = {
             attackSpeed: "0.6",
             attackRange: "1 range",
             magicResist: "20",
-            armor: "25"
+            armor: "75"
         },
         tier: 2,
         build: ["Thornmail", "Locket of the Iron Solari", "Zeke's Herald"],
@@ -213,14 +213,14 @@ export const champions = {
         ability: {
             image: require('./Abilities/Chogath.png'),
             name: "Rupture",
-            description: "After a 1.5-second delay, deals 200 / 400 / 600 magic damage and  knocks up all enemies in a 3x3 area, stunning them for 1.5 / 2 / 2.5 seconds."
+            description: "After a 1.5-second delay, deals 250 / 500 / 750 magic damage and  knocks up all enemies in a 3x3 area, stunning them for 1.5 / 1.75 / 2 seconds."
         },
         stats: {
             cost: 4,
             health: "1000 / 1800 / 3600",
             mana: "150",
             damage: "70 / 126 / 252",
-            attackSpeed: "0.55",
+            attackSpeed: "0.60",
             attackRange: "1 range",
             magicResist: "20",
             armor: "20"
@@ -246,7 +246,7 @@ export const champions = {
             attackSpeed: "0.5",
             attackRange: "1 range",
             magicResist: "20",
-            armor: "25"
+            armor: "40"
         },
         tier: 1,
         build: ["Frozen Heart", "Dragon's Claw", "Phantom Dancer"],
@@ -305,13 +305,13 @@ export const champions = {
         ability: {
             image: require('./Abilities/Evelynn.png'),
             name: "Last Caress",
-            description: "Deals 200 / 250 / 300 magic damage to the 3 closest enemies and blinks back 3 ranges. Damage is increased to 600 / 1000 / 1500 against enemies below 50% health."
+            description: "Deals 200 / 300 / 400 magic damage to the 3 closest enemies and blinks back 3 ranges. Damage is increased to 600 / 1000 / 1500 against enemies below 50% health."
         },
         stats: {
             cost: 3,
             health: "550 / 990 / 1980",
             mana: "75",
-            damage: "60 / 108 / 216",
+            damage: "70 / 126 / 252",
             attackSpeed: "0.6",
             attackRange: "1 range",
             magicResist: "20",
@@ -375,17 +375,17 @@ export const champions = {
         ability: {
             image: require('./Abilities/Garen.png'),
             name: "Judgment",
-            description: "Spins his sword around his body for 4 seconds, becoming immune to magic damage and dealing 50 / 65 / 80 magic damage to nearby enemies each second. The spins can deal a total of 450 / 585 / 720 magic damage."
+            description: "Spins his sword around his body for 4 seconds, becoming immune to magic damage and dealing 360 / 585 / 810 total magic damage to nearby enemies."
         },
         stats: {
             cost: 1,
             health: "600 / 1080 / 2160",
             mana: "100",
-            damage: "55 / 99 / 198",
-            attackSpeed: "0.55",
+            damage: "50 / 90 / 180",
+            attackSpeed: "0.60",
             attackRange: "1 range",
             magicResist: "20",
-            armor: "35"
+            armor: "40"
         },
         tier: 1,
         build: ["Morellonomicon", "Frozen Heart", "Phantom Dancer"],
@@ -405,7 +405,7 @@ export const champions = {
             cost: 4,
             health: "750 / 1350 / 2700",
             mana: "125",
-            damage: "45 / 81 / 162",
+            damage: "50 / 90 / 180",
             attackSpeed: "0.7",
             attackRange: "2 range",
             magicResist: "20",
@@ -429,7 +429,7 @@ export const champions = {
             health: "450 / 810 / 1620",
             mana: "0",
             damage: "55 / 99 / 198",
-            attackSpeed: "0.5",
+            attackSpeed: "0.55",
             attackRange: "1 range",
             magicResist: "20",
             armor: "20"
@@ -445,7 +445,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Karthus.png'),
             name: "Requiem",
-            description: "Channel for 3 seconds to deal 350 / 600 / 850 magic damage to 4 / 7 / 10 random enemies."
+            description: "Channel for 3 seconds to deal 400 / 700 / 1000 magic damage to 5 / 9 / 13 random enemies."
         },
         stats: {
             cost: 5,
@@ -474,8 +474,8 @@ export const champions = {
             cost: 1,
             health: "550 / 990 / 1980",
             mana: "0",
-            damage: "45 / 81 / 162",
-            attackSpeed: "0.65",
+            damage: "55 / 99 / 198",
+            attackSpeed: "0.60",
             attackRange: "1 range",
             magicResist: "20",
             armor: "25"
@@ -491,7 +491,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Katarina.png'),
             name: "Death Lotus",
-            description: "Channels for 2.5 seconds and fires daggers at 3 / 5 / 7 nearby enemies, dealing 40 / 60 / 80 magic damage per tick and reducing healing on them for 3 seconds. The channel can deal a total of 600 / 900 / 1200 magic damage."
+            description: "Channels for 2.5 seconds and fires daggers at 4 / 6 / 8 nearby enemies, dealing 40 / 60 / 80 magic damage per tick and reducing healing on them for 3 seconds. The channel can deal a total of 600 / 900 / 1200 magic damage."
         },
         stats: {
             cost: 3,
@@ -518,13 +518,13 @@ export const champions = {
         },
         stats: {
             cost: 5,
-            health: "800 / 1440 / 2880",
+            health: "750 / 1350 / 2700",
             mana: "100",
             damage: "60 / 108 / 216",
             attackSpeed: "1.1",
             attackRange: "3 range",
             magicResist: "20",
-            armor: "35"
+            armor: "40"
         },
         tier: 5,
         build: ["Spear of Shojin", "Spear of Shojin", "Guinsoo's Rageblade"],
@@ -538,7 +538,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Kennen.png'),
             name: "Slicing Maelstorm",
-            description: "Summons a storm around him for 3 seconds, dealing 66 / 108 / 150 magic damage each 0.5 seconds to nearby enemies, stunning for 1.5 seconds them after 3 hits. The storm can deal a total of 400 / 650 / 900 magic damage."
+            description: "Summons a storm around him for 3 seconds, dealing 225 / 450 / 675 total magic damage and stunning for 1.5 seconds after 3 hits."
         },
         stats: {
             cost: 3,
@@ -561,13 +561,13 @@ export const champions = {
         ability: {
             image: require('./Abilities/Khazix.png'),
             name: "Taste their Fear",
-            description: "Deals 150 / 250 / 350 magic damage to the target enemy. Instead deals 400 / 600 / 800 magic damage if they have no allies adjacent to them."
+            description: "Deals 150 / 300 / 450 magic damage to the target enemy. Deals 400 / 600 / 800 magic damage if they have no allies adjacent to them."
         },
         stats: {
             cost: 1,
             health: "500 / 900 / 1800",
             mana: "50",
-            damage: "50 / 90 / 180",
+            damage: "55 / 99 / 198",
             attackSpeed: "0.6",
             attackRange: "1 range",
             magicResist: "20",
@@ -590,7 +590,7 @@ export const champions = {
             cost: 4,
             health: "600 / 1080 / 2160",
             mana: "150",
-            damage: "55 / 99 / 198",
+            damage: "60 / 108 / 216",
             attackSpeed: "0.65",
             attackRange: "3 range",
             magicResist: "20",
@@ -617,7 +617,7 @@ export const champions = {
             attackSpeed: "0.55",
             attackRange: "1 range",
             magicResist: "20",
-            armor: "55"
+            armor: "100"
         },
         tier: 4,
         build: ["Frozen Heart", "Locket of the Iron Solari", "Zeke's Herald"],
@@ -630,7 +630,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Lissandra.png'),
             name: "Frozen Tomb",
-            description: "Encases the target in ice, stunning them for 1.5 seconds and dealing 225 / 300 / 375 magic damage to nearby enemies. She also creates a 2x2 zone for 3 seconds that slows enemies within for 3 seconds. If she is below 50% health, she instead encases herself for 2 seconds, becoming untargetable."
+            description: "Encases the target in ice, stunning them for 1.5 seconds and dealing 150 / 275 / 400 magic damage to nearby enemies. She also creates a 2x2 zone for 3 seconds that slows enemies within for 3 seconds. If she is below 50% health, she instead encases herself for 2 seconds, becoming untargetable."
         },
         stats: {
             cost: 2,
@@ -686,7 +686,7 @@ export const champions = {
             attackSpeed: "0.6",
             attackRange: "2 range",
             magicResist: "20",
-            armor: "25"
+            armor: "20"
         },
         tier: 2,
         build: ["Spear of Shojin", "Spear of Shojin", "Guinsoo's Rageblade"],
@@ -732,7 +732,7 @@ export const champions = {
             attackSpeed: "0.5",
             attackRange: "1 range",
             magicResist: "20",
-            armor: "35"
+            armor: "40"
         },
         tier: 1,
         build: ["Frozen Heart", "Dragon's Claw", "Phantom Dancer"],
@@ -745,7 +745,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Morgana.png'),
             name: "Soul Shackles",
-            description: "Fires chains to nearby enemies up to 3 rangees away, dealing 300 / 375 / 450 magic damage, and slowing them by 20% while the chains hold. After 3 seconds if the chains held, deals the same damage and stuns them for 2 / 4 / 6 seconds."
+            description: "Fires chains to nearby enemies up to 3 range away, dealing 200 / 325 / 450 magic damage, and slowing them by 20% while the chains hold. After 3 seconds if the chains held, deals the same damage and stuns them for 2 / 4 / 6 seconds."
         },
         stats: {
             cost: 3,
@@ -837,13 +837,13 @@ export const champions = {
         ability: {
             image: require('./Abilities/Reksai.png'),
             name: "Burrow",
-            description: " Burrows into the ground, becoming untargetable for 2 seconds while healing each 0.5 seconds for 300 / 400 / 500 health in total. She then unburrows, dealing 150 / 250 / 350 magic damage and knocking up for 1 second the closest enemy."
+            description: " Burrows into the ground, becoming untargetable for 2 seconds while healing each 0.5 seconds for 150 / 300 / 450 health in total. She then unburrows, dealing 200 / 350 / 500 magic damage and knocking up for 1 second the closest enemy."
         },
         stats: {
             cost: 2,
             health: "650 / 1170 / 2340",
             mana: "150",
-            damage: "40 / 72 / 144",
+            damage: "50 / 90 / 180",
             attackSpeed: "0.65",
             attackRange: "1 range",
             magicResist: "20",
@@ -860,14 +860,14 @@ export const champions = {
         ability: {
             image: require('./Abilities/Rengar.png'),
             name: "Savagery",
-            description: "Leaps at the weakest enemy, dealing 210% / 320% / 430% physical damage, and gaining 50% / 65% / 80% attack speed and 25% critical strike chance for 6 seconds."
+            description: "Leaps at the weakest enemy, dealing 210% / 320% / 430% physical damage, and gaining 40% / 70% / 100% attack speed and 25% critical strike chance for 6 seconds."
         },
         stats: {
             cost: 3,
             health: "550 / 990 / 1980",
             mana: "75",
-            damage: "65 / 117 / 234",
-            attackSpeed: "0.55",
+            damage: "70 / 126 / 252",
+            attackSpeed: "0.60",
             attackRange: "1 range",
             magicResist: "20",
             armor: "20"
@@ -883,7 +883,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Sejuani.png'),
             name: "Glacial Prison",
-            description: "Creates a large glacial storm that detonates after 2 seconds, dealing 100 / 175 / 250 magic damage and  stunning for 2 / 3.5 / 5 seconds enemies within it."
+            description: "Creates a large glacial storm that detonates after 2 seconds, dealing 100 / 175 / 250 magic damage and  stunning for 2 / 4 / 6 seconds enemies within it."
         },
         stats: {
             cost: 4,
@@ -893,7 +893,7 @@ export const champions = {
             attackSpeed: "0.55",
             attackRange: "1 range",
             magicResist: "25",
-            armor: "35"
+            armor: "40"
         },
         tier: 4,
         build: ["Spear of Shojin", "Dragon's Claw", "Phantom Dancer"],
@@ -913,7 +913,7 @@ export const champions = {
             health: "650 / 1170 / 2340",
             mana: "150",
             damage: "65 / 117 / 234",
-            attackSpeed: "0.6",
+            attackSpeed: "0.7",
             attackRange: "1 range",
             magicResist: "20",
             armor: "30"
@@ -939,7 +939,7 @@ export const champions = {
             attackSpeed: "0.7",
             attackRange: "1 range",
             magicResist: "20",
-            armor: "20"
+            armor: "30"
         },
         tier: 3,
         build: ["Titanic Hydra", "Warmog's Armor", "Phantom Dancer"],
@@ -999,7 +999,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Twisted_Fate.png'),
             name: "Pick a Card",
-            description: "Twisted Fate throws a card that either stuns for 2, 3 ,4 seconds, deals damage around his target for 200 / 300 / 400, or restores 20 / 35 / 50 mana to himself and nearby allies."
+            description: "Twisted Fate throws a card that either stuns for 2, 3 , 4 seconds, deals damage around his target for 150 / 250 / 350, or restores 20 / 35 / 50 mana to himself and nearby allies."
         },
         stats: {
             cost: 2,
@@ -1022,7 +1022,7 @@ export const champions = {
         ability: {
             image: require('./Abilities/Varus.png'),
             name: "Piercing Arrow",
-            description: "After charging for 1.5 seconds, fires an arrow up to 8 range away, dealing 400 / 600 / 800 magic damage to all enemies hit."
+            description: "After charging for 1.5 seconds, fires an arrow up to 8 range away, dealing 300 / 550 / 800 magic damage to all enemies hit."
         },
         stats: {
             cost: 2,
@@ -1051,8 +1051,8 @@ export const champions = {
             cost: 1,
             health: "550 / 990 / 1980",
             mana: "0",
-            damage: "45 / 81 / 162",
-            attackSpeed: "0.65",
+            damage: "40 / 72 / 144",
+            attackSpeed: "0.75",
             attackRange: "3 range",
             magicResist: "20",
             armor: "25"
@@ -1072,7 +1072,7 @@ export const champions = {
         },
         stats: {
             cost: 3,
-            health: "450 / 810 / 1620",
+            health: "500 / 900 / 1800",
             mana: "75",
             damage: "45 / 81 / 162",
             attackSpeed: "0.55",
@@ -1143,7 +1143,7 @@ export const champions = {
             cost: 5,
             health: "700 / 1260 / 2520",
             mana: "25",
-            damage: "65 / 117 / 234         ",
+            damage: "75 / 135 / 270",
             attackSpeed: "1.0",
             attackRange: "1 range",
             magicResist: "20",
@@ -1166,7 +1166,7 @@ export const champions = {
             cost: 2,
             health: "500 / 900 / 1800",
             mana: "75",
-            damage: "60 / 108 / 216",
+            damage: "65 / 117 / 234",
             attackSpeed: "0.65",
             attackRange: "1 range",
             magicResist: "20",
@@ -1186,22 +1186,22 @@ export const origin = {
         ability: {
             1: {
                 amount: 2,
-                effect: "25% chance"
+                effect: "20% chance"
             },
             2: {
                 amount: 4,
-                effect: "50% chance"
+                effect: "35% chance"
             },
             3: {
                 amount: 6,
-                effect: "85% chance"
+                effect: "60% chance"
             },
         }
     },
     Dragon: {
         name: "Dragon",
         image: require('./Origin/Dragon.png'),
-        description: "While 2 Dragons are in play, all Dragons are immune to magic damage."
+        description: "While 2 Dragons are in play, all Dragons gain 83% Magic Immunity"
     },
     Exile: {
         name: "Exile",
@@ -1245,22 +1245,22 @@ export const origin = {
     Ninja: {
         name: "Ninja",
         image: require('./Origin/Ninja.png'),
-        description: "Ninjas gain a percentage of Attack Damage.",
+        description: "Ninjas gain a flat damage and ability power.",
         ability: {
             1: {
                 amount: 1,
-                effect: "This ninja gains 40% attack damage"
+                effect: "This ninja gains 40 AD & AP"
             },
             2: {
                 amount: 4,
-                effect: "All Ninjas gain 80% attack damage"
+                effect: "All ninjas gain +60 AD & AP"
             }
         }
     },
     Noble: {
         name: "Noble",
         image: require('./Origin/Noble.png'),
-        description: "Grants 100 armor and basic attacks restore 35 health on-hit to the follow",
+        description: "Grants 60 armor & magic resist and basic attacks restore 35 health on-hit to the follow",
         ability: {
             1: {
                 amount: 3,
@@ -1290,7 +1290,7 @@ export const origin = {
     Void: {
         name: "Void",
         image: require('./Origin/Void.png'),
-        description: "While 3 Voidlings are in play, your team gains 50% armor penetration.",
+        description: "While 3 Voidlings are in play, your void units deal true damage.",
     },
     Wild: {
         name: "Wild",
@@ -1310,15 +1310,15 @@ export const origin = {
     Yordle: {
         name: "Yordle",
         image: require('./Origin/Yordle.png'),
-        description: "Yordles have a chance to dodge enemy attacks",
+        description: "Yordles have a chance to dodge enemy attacks.",
         ability: {
             1: {
                 amount: 3,
-                effect: "25% chance"
+                effect: "30% chance"
             },
             2: {
                 amount: 6,
-                effect: "60% chance"
+                effect: "55% chance + dodge on-hit effects"
             }
         }
     },
@@ -1352,6 +1352,10 @@ export const classes = {
             2: {
                 amount: 6,
                 effect: "Two additional strikes"
+            },
+            3: {
+                amount: 9,
+                effect: "Four additional strikes"
             }
         }
     },
@@ -1362,11 +1366,15 @@ export const classes = {
         ability: {
             1: {
                 amount: 2,
-                effect: "+300"
+                effect: "+300 HP"
             },
             2: {
                 amount: 4,
-                effect: "+700"
+                effect: "+700 HP"
+            },
+            3: {
+                amount: 6,
+                effect: "+1200 HP"
             }
         }
     },
@@ -1384,11 +1392,11 @@ export const classes = {
     Guardian: {
         name: "Guardian",
         image: require('./Class/Guardian.png'),
-        description: "Beginning combat with 2 Guardians will grant 40 armor to all units that start adjacent to a Guardian.",
+        description: "Beginning combat with 2 Guardians will grant 50 armor to all units that start adjacent to a Guardian. Guardians don't buff themselves.",
         ability: {
             1: {
                 amount: 2,
-                effect: "At the start of combat, all Guardians and adjacent allies receive +40 armor."
+                effect: "At the start of combat, all Guardians and adjacent allies receive +50 armor."
             },
         }
     },
@@ -1404,25 +1412,29 @@ export const classes = {
             2: {
                 amount: 4,
                 effect: "Two additional enemies"
+            },
+            3: {
+                amount: 6,
+                effect: "Three additional enemies"
             }
         }
     },
     Knight: {
         name: "Knight",
         image: require('./Class/Knight.png'),
-        description: "Knights ignore a flat amount of damage from basic attacks.",
+        description: "Knights ignore a flat amount of damage from all sources.",
         ability: {
             1: {
                 amount: 2,
-                effect: "20"
+                effect: "15"
             },
             2: {
                 amount: 4,
-                effect: "40"
+                effect: "30"
             },
             3: {
                 amount: 6,
-                effect: "80"
+                effect: "55"
             }
         }
     },
@@ -1449,6 +1461,10 @@ export const classes = {
             1: {
                 amount: 3,
                 effect: "60% bonus maximum health"
+            },
+            2: {
+                amount: 6,
+                effect: "120% bonus maximum health"
             },
         }
     },
@@ -1690,7 +1706,7 @@ export const items = {
         image: require("../assets/Items/Statikk_Shiv_item.png"),
         mana: 20,
         as: 20,
-        passive: "Every 3rd attack deals 100 splash magical damage to 3 additional targets."
+        passive: "Every 3rd attack deals 90 splash magical damage to 3 additional targets."
     },
     "Phantom Dancer": {
         name: "Phantom Dancer",
@@ -1737,14 +1753,14 @@ export const items = {
         image: require("../assets/Items/Locket_of_the_Iron_Solari_item.png"),
         ap: 20,
         armor: 20,
-        passive: "On start of combat, allies two spaces to the left and right gain a shield of 200."
+        passive: "On start of combat, allies two spaces to the left and right gain a shield of 250 for 4 seconds."
     },
     "Ionic Spark": {
         name: "Ionic Spark",
         image: require("../assets/Items/Ionic_Spark_item.png"),
         ap: 20,
         mr: 20,
-        passive: "Whenever an enemy casts a spell, they take 200 true damage"
+        passive: "Whenever an enemy casts a spell, they take 150 true damage"
     },
     "Morellonomicon": {
         name: "Morellonomicon",
@@ -1815,7 +1831,7 @@ export const items = {
         image: require("../assets/Items/Hush_item.png"),
         mana: 20,
         mr: 20,
-        passive: "Attacks have a 50% chance to Silence."
+        passive: "Attacks have a 50% chance to silence for 3 seconds."
     },
     "Darkin": {
         name: "Darkin",
